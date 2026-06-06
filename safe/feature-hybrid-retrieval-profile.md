@@ -5,7 +5,7 @@ Capability: Retrieval and grounding
 Priority: P0
 Sprint target: Beta/Gamma
 Owner role: ML/RAG Engineer
-Status: Proposed
+Status: In Progress
 Dependencies: ING-002, CHUNK-001, PROV-002
 
 ## Intent
@@ -28,8 +28,15 @@ As a developer, I want a persistent local Chroma index, so that indexed SAS docu
 
 Acceptance criteria:
 - Chroma collection is created from ingested chunks.
-- Embedding provider is configurable with OpenAI as the default.
+- Chroma collection is created through `langchain-chroma`.
+- Embedding provider is configurable through LangChain embeddings with OpenAI as the default.
 - Index path and collection name are configurable for local development and tests.
+
+Current evidence:
+- RET-001 is done.
+- First index run created `sas_94_docs` under `data/chroma` from P0 SAS chunks.
+- 8,953 chunks were indexed with `text-embedding-3-small`.
+- Query smoke test for `PROC SQL join syntax` returned citation-ready metadata from `docs/sas-documents/sqlproc.pdf`.
 
 ### RET-002 - Add semantic search with metadata filters
 
@@ -54,3 +61,7 @@ Acceptance criteria:
 - Retrieval service can query indexed SAS 9.4 chunks locally.
 - Search results expose provenance required by citation stories.
 - Recall metrics are captured against the benchmark when available.
+
+Current status:
+- Local semantic vector index exists and can be queried through the ingestion CLI.
+- Metadata filters and lexical fallback remain in RET-002 and RET-003.

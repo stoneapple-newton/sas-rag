@@ -58,6 +58,11 @@ Acceptance criteria:
 - Ingestion report lists loaded, skipped, failed, and unchanged sources.
 - Retrieval smoke test covers at least macro, PROC SQL, DATA step, and language reference topics.
 
+Current evidence:
+- First Chroma indexing run filtered `priority == "P0"` and reset `sas_94_docs`.
+- 8,953 P0 chunks were indexed with `text-embedding-3-small`; 8,182 non-P0 chunks were skipped.
+- PROC SQL smoke query returned citation metadata from `docs/sas-documents/sqlproc.pdf`.
+
 ### ING-004 - Add checksum and re-ingestion controls
 
 As a data engineer, I want checksum-based re-ingestion controls, so that unchanged sources are not repeatedly duplicated or needlessly reprocessed.

@@ -5,7 +5,7 @@ Parent: [Official SAS Docs Ingestion](../feature-official-sas-docs-ingestion.md)
 Capability: Corpus ingestion and provenance
 Sprint: Beta
 Points: 8
-Status: Proposed
+Status: In Progress
 Dependencies: ING-002, PARSE-002, PROV-002
 Wiki: [SAS Corpus](../../docs/wiki/sas-corpus.md), [Ingestion Pipeline](../../docs/wiki/ingestion-pipeline.md)
 
@@ -35,7 +35,9 @@ Scale the proven ingestion slice to the P0 SAS 9.4 source whitelist. The batch s
 
 ## Done Evidence
 
-- Batch ingestion report.
-- Source coverage summary.
-- Chroma collection build report with indexed document count.
-- Smoke retrieval transcript for representative SAS topics.
+- Batch ingestion report: `data/ingestion/runs/latest/report.json`.
+- Source coverage summary: 22 PDFs loaded, 16,698 pages parsed, 17,135 chunks emitted, 0 failed sources.
+- Chroma collection build report: `data/ingestion/runs/latest/chroma_report.json`.
+- First P0 index run: 8,953 chunks indexed to `sas_94_docs`; 8,182 non-P0 chunks skipped.
+- Smoke retrieval evidence exists for PROC SQL joins.
+- Remaining evidence: add smoke retrieval transcripts for macro, DATA step, and language reference topics.

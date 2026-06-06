@@ -5,7 +5,7 @@ Parent: [Official SAS Docs Ingestion](../feature-official-sas-docs-ingestion.md)
 Capability: Corpus ingestion and provenance
 Sprint: Alpha
 Points: 5
-Status: Proposed
+Status: In Progress
 Dependencies: ING-001, PARSE-001, PROV-001
 Wiki: [SAS Corpus](../../docs/wiki/sas-corpus.md), [Ingestion Pipeline](../../docs/wiki/ingestion-pipeline.md), [Provenance Schema](../../docs/wiki/provenance-schema.md)
 
@@ -36,7 +36,8 @@ Use a single whitelisted SAS 9.4 documentation family as the vertical slice. The
 
 ## Done Evidence
 
-- Ingestion command output or report.
-- Sample indexed chunk with provenance.
-- LangChain `Document` sample showing page content and metadata.
-- Retrieval smoke query result with citation metadata.
+- PDF ingestion report: `data/ingestion/runs/latest/report.json`.
+- Chroma index report: `data/ingestion/runs/latest/chroma_report.json`.
+- Current evidence: P0 chunks are converted to LangChain documents and indexed through `langchain-chroma`.
+- Smoke query `PROC SQL join syntax` returned citation metadata from the SAS SQL Procedure User's Guide.
+- Remaining evidence: prove rerun duplicate behavior without resetting the collection.
