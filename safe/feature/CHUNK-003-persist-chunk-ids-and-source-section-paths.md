@@ -16,11 +16,15 @@ As a retrieval engineer, I want stable chunk IDs and section paths, so that cita
 ## Detail
 
 Persist chunk identity and section hierarchy through the vector-store metadata layer. The same unchanged source section should produce the same logical chunk ID across reruns.
+Chunk identity should also account for chunk type so prose/reference chunks and code/example chunks can coexist without collision.
+Chunk metadata should support parent-child retrieval and atomic SAS reference-object lookup.
 
 ## Acceptance Criteria
 
 - Chunk IDs remain stable for unchanged source content and section context.
 - Section paths are stored in vector metadata.
+- Chunk type, product/version fields, and source priority are stored in vector metadata.
+- Section type, SAS object type/name, keywords, valid context, parent chunk ID, and index category are stored when available.
 - Re-indexing the same source does not create duplicate logical chunks.
 
 ## Implementation Notes
@@ -28,6 +32,8 @@ Persist chunk identity and section hierarchy through the vector-store metadata l
 - Chunk IDs should be derived from stable source and content inputs.
 - Section paths should preserve enough heading context for citations.
 - Coordinate with benchmark labels that reference expected chunks.
+- Include chunk type in benchmark labels where the same source section emits both prose and example chunks.
+- Reference-object chunk IDs should derive from stable source, SAS object type/name, version, and section path.
 
 ## Done Evidence
 

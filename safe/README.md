@@ -33,12 +33,12 @@ Individual story files live in [feature/](feature/README.md) and [enabler/](enab
 
 ## Sprint map
 
-| Sprint | Focus | Story IDs |
-|---|---|---|
-| Alpha | Foundation, source policy, metadata, parser spike, local run path | ING-001, ING-002, PROV-001, PROV-002, PARSE-001, PARSE-002, OBS-001, DEV-001, CI-001, SEC-001 |
-| Beta | Ingestion scale-out, chunking, vector index, first citations, benchmark v1 | ING-003, ING-004, PROV-003, PARSE-003, CHUNK-001, CHUNK-002, CHUNK-003, RET-001, RET-002, CITE-001, EVAL-001 |
-| Gamma | MCP server, tool contracts, retrieval hardening, traces, threat model | RET-003, CITE-002, CITE-003, EVAL-002, MCP-001, MCP-002, MCP-003, MCP-004, SCHEMA-001, SCHEMA-002, OBS-002, SEC-002 |
-| Delta | Final MCP tool, regression gate, Docker, CI evals, least privilege | EVAL-003, MCP-005, OBS-003, DEV-002, CI-002, SEC-003 |
+| Sprint | Focus                                                                      | Story IDs                                                                                                           |
+| ------ | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Alpha  | Foundation, source policy, metadata, parser spike, local run path          | ING-001, ING-002, PROV-001, PROV-002, PARSE-001, PARSE-002, OBS-001, DEV-001, CI-001, SEC-001                       |
+| Beta   | Ingestion scale-out, chunking, vector index, first citations, benchmark v1 | ING-003, ING-004, PROV-003, PARSE-003, CHUNK-001, CHUNK-002, CHUNK-003, RET-001, RET-002, CITE-001, EVAL-001        |
+| Gamma  | MCP server, tool contracts, retrieval hardening, traces, threat model      | RET-003, CITE-002, CITE-003, EVAL-002, MCP-001, MCP-002, MCP-003, MCP-004, SCHEMA-001, SCHEMA-002, OBS-002, SEC-002 |
+| Delta  | Final MCP tool, regression gate, Docker, CI evals, least privilege         | EVAL-003, MCP-005, OBS-003, DEV-002, CI-002, SEC-003                                                                |
 
 ## Definition of Done
 

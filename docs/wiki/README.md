@@ -16,3 +16,5 @@ Minimal project wiki for research notes, architecture decisions, and planning co
 - [Developer Environment](developer-environment.md)
 - [CI Quality Gates](ci-quality-gates.md)
 - [Security Model](security-model.md)
+- [SAS RAG Docs](sas-rag-docs.md)
+- [Chunking Research](chunking-research.md)

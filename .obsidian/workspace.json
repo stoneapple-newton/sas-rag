@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "safe/feature/DEV-001-add-one-command-local-setup-run-path.md",
+                "file": "docs/raw/sas-rag-docs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DEV-001-add-one-command-local-setup-run-path"
+              "title": "sas-rag-docs"
+            }
+          },
+          {
+            "id": "ab782f6044316a1f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/wiki/chunking-research.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "chunking-research"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "safe/feature/DEV-001-add-one-command-local-setup-run-path.md",
+                "file": "docs/wiki/chunking-research.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for DEV-001-add-one-command-local-setup-run-path"
+              "title": "Backlinks for chunking-research"
             }
           },
           {
@@ -113,12 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "safe/feature/DEV-001-add-one-command-local-setup-run-path.md",
+                "file": "docs/wiki/chunking-research.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from DEV-001-add-one-command-local-setup-run-path"
+              "title": "Outgoing links from chunking-research"
             }
           },
           {
@@ -156,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "safe/feature/DEV-001-add-one-command-local-setup-run-path.md",
+                "file": "docs/wiki/chunking-research.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of DEV-001-add-one-command-local-setup-run-path"
+              "title": "Outline of chunking-research"
             }
           }
         ]
@@ -183,34 +198,35 @@
       "bases:Create new base": false
     }
   },
-  "active": "068a17fd9fb17368",
+  "active": "ab782f6044316a1f",
   "lastOpenFiles": [
-    "safe/Overall-structure.md",
-    "docs/wiki/ingestion-pipeline.md",
-    "README.md",
-    "safe/enabler/CHUNK-001-implement-heading-aware-documentation-chunking.md",
     "docs/wiki/chunking-strategy.md",
-    "safe/feature/RET-001-create-chroma-backed-vector-index.md",
-    "docs/wiki/chroma-index.md",
-    "safe/feature/CI-001-add-lint-unit-test-workflow.md",
-    "docs/wiki/evaluation-benchmark.md",
-    "docs/wiki/developer-environment.md",
-    "docs/wiki/citation-grounding.md",
+    "safe/enabler/CHUNK-001-implement-heading-aware-documentation-chunking.md",
+    "safe/feature-structure-aware-chunking.md",
+    "docs/wiki/chunking-research.md",
+    "docs/raw/sas-rag-docs.md",
+    "docs/raw/Chunking research.md",
     "docs/wiki/ci-quality-gates.md",
-    "docs/wiki/sas-corpus.md",
-    "docs/wiki/security-model.md",
-    "docs/wiki/observability-and-evals.md",
+    "docs/wiki/chroma-index.md",
     "docs/wiki/tool-contracts.md",
-    "docs/wiki/mcp-server.md",
-    "docs/wiki/retrieval-architecture.md",
-    "docs/wiki/provenance-schema.md",
-    "docs/wiki/README.md",
-    "safe/enabler/SEC-003-verify-read-only-least-privilege-tool-behavior.md",
-    "safe/enabler/SEC-002-threat-model-local-mcp-tool-surface.md",
-    "safe/enabler/SEC-001-document-secret-handling-and-env-var-policy.md",
-    "safe/enabler/SCHEMA-002-add-mcp-contract-tests.md",
-    "safe/enabler/SCHEMA-001-define-versioned-mcp-tool-schemas.md",
-    "safe/enabler/EVAL-003-add-regression-threshold-report.md",
+    "docs/wiki/security-model.md",
+    "docs/wiki/sas-rag-docs.md",
+    "safe/enabler/ING-004-add-checksum-and-re-ingestion-controls.md",
+    "safe/enabler/ING-001-define-sas-94-source-whitelist.md",
+    "safe/README.md",
+    "safe/enabler/CHUNK-002-implement-sas-aware-code-boundary-detection.md",
+    "safe/enabler/CITE-003-add-unsupported-answer-refusal-rule.md",
+    "docs/raw/Unconfirmed 772780.crdownload",
+    "safe/enabler/PARSE-001-create-loader-adapter-interface-for-html-pdf-text.md",
+    "docs/wiki/ingestion-pipeline.md",
+    "safe/enabler/README.md",
+    "docs/log.md",
+    "docs/README.md",
+    "safe/feature/DEV-001-add-one-command-local-setup-run-path.md",
+    "safe/Overall-structure.md",
+    "README.md",
+    "safe/feature/RET-001-create-chroma-backed-vector-index.md",
+    "safe/feature/CI-001-add-lint-unit-test-workflow.md",
     "safe/feature",
     "safe/enabler"
   ]

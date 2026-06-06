@@ -1,85 +1,67 @@
 ---
 name: safe-wiki-manager
-description: [TODO: Complete and informative explanation of what the skill does and when to use it. Include WHEN to use this skill - specific scenarios, file types, or tasks that trigger it.]
+description: Maintain the SAS RAG MCP project's SAFe Markdown backlog and Karpathy-style docs wiki. Use when Codex needs to create, update, review, reorganize, or validate files under safe/, safe/feature/, safe/enabler/, docs/raw/, docs/wiki/, docs/README.md, or docs/log.md, including curated imports from docs/raw/ into docs/wiki/.
 ---
 
-# Safe Wiki Manager
+# SAFe Wiki Manager
 
-## Overview
+Use this skill for planning and documentation work in the SAS RAG MCP repo.
 
-[TODO: 1-2 sentences explaining what this skill enables]
+## Core Workflow
 
-## Structuring This Skill
+1. Inspect the relevant `safe/`, `docs/raw/`, `docs/wiki/`, and `docs/log.md` files before editing.
+2. Preserve existing story IDs, parent links, sprint assignments, and wiki links unless the user explicitly asks to change planning structure.
+3. Keep SAFe planning content under `safe/` and curated knowledge under `docs/wiki/`.
+4. Record meaningful documentation changes and raw-to-wiki imports in `docs/log.md`.
+5. Validate links and indexes after creating or renaming files.
 
-[TODO: Choose the structure that best fits this skill's purpose. Common patterns:
+## Project Structure
 
-**1. Workflow-Based** (best for sequential processes)
-- Works well when there are clear step-by-step procedures
-- Example: DOCX skill with "Workflow Decision Tree" -> "Reading" -> "Creating" -> "Editing"
-- Structure: ## Overview -> ## Workflow Decision Tree -> ## Step 1 -> ## Step 2...
+- `safe/Overall-structure.md` - source PI plan and roadmap.
+- `safe/README.md` - PI backlog index, assumptions, sprint map, and Definition of Done.
+- `safe/feature-*.md` - parent feature planning files.
+- `safe/enabler-*.md` - parent enabler planning files.
+- `safe/feature/*.md` - individual feature story files.
+- `safe/enabler/*.md` - individual enabler story files.
+- `docs/raw/` - uncurated source notes and research captures.
+- `docs/wiki/` - concise, linked, Karpathy-style wiki pages.
+- `docs/README.md` - documentation area guide.
+- `docs/log.md` - documentation changes, imports, decisions, and follow-ups.
 
-**2. Task-Based** (best for tool collections)
-- Works well when the skill offers different operations/capabilities
-- Example: PDF skill with "Quick Start" -> "Merge PDFs" -> "Split PDFs" -> "Extract Text"
-- Structure: ## Overview -> ## Quick Start -> ## Task Category 1 -> ## Task Category 2...
+## SAFe Rules
 
-**3. Reference/Guidelines** (best for standards or specifications)
-- Works well for brand guidelines, coding standards, or requirements
-- Example: Brand styling with "Brand Guidelines" -> "Colors" -> "Typography" -> "Features"
-- Structure: ## Overview -> ## Guidelines -> ## Specifications -> ## Usage...
+Read `references/safe-file-structure.md` when creating or restructuring SAFe files.
 
-**4. Capabilities-Based** (best for integrated systems)
-- Works well when the skill provides multiple interrelated features
-- Example: Product Management with "Core Capabilities" -> numbered capability list
-- Structure: ## Overview -> ## Core Capabilities -> ### 1. Feature -> ### 2. Feature...
+- Preserve hierarchy: Epic -> Capability -> Feature/Enabler -> Story.
+- Use parent feature/enabler files for planning summaries and child story tables.
+- Use `safe/feature/` and `safe/enabler/` for individual story files.
+- Individual story files must include: type, parent, capability, sprint, points, status, dependencies, wiki links, story, acceptance criteria, implementation notes, and done evidence.
+- Keep story IDs stable. Do not renumber IDs to make files prettier.
 
-Patterns can be mixed and matched as needed. Most skills combine patterns (e.g., start with task-based, add workflow for complex operations).
+## Wiki Rules
 
-Delete this entire "Structuring This Skill" section when done - it's just guidance.]
+Read `references/wiki-style.md` when creating or rewriting wiki pages.
 
-## [TODO: Replace with the first main section based on chosen structure]
+- Follow a Karpathy-style wiki: short pages, dense notes, strong links.
+- Keep raw copied material in `docs/raw/`.
+- Put curated project knowledge in `docs/wiki/`.
+- Link wiki pages to related SAFe stories when the page supports planning or implementation.
+- Prefer one topic per page.
 
-[TODO: Add content here. See examples in existing skills:
-- Code samples for technical skills
-- Decision trees for complex workflows
-- Concrete examples with realistic user requests
-- References to scripts/templates/references as needed]
+## Raw Import
 
-## Resources (optional)
+Use `scripts/import_raw_to_wiki.py` for deterministic Markdown/text imports:
 
-Create only the resource directories this skill actually needs. Delete this section if no resources are required.
+```powershell
+python .agents/skills/safe-wiki-manager/scripts/import_raw_to_wiki.py --dry-run
+python .agents/skills/safe-wiki-manager/scripts/import_raw_to_wiki.py --write
+```
 
-### scripts/
-Executable code (Python/Bash/etc.) that can be run directly to perform specific operations.
+The script:
+- Reads `.md` and `.txt` files from `docs/raw/`.
+- Creates curated starter pages in `docs/wiki/`.
+- Adds source backlinks to raw files.
+- Updates `docs/wiki/README.md`.
+- Appends import entries to `docs/log.md`.
 
-**Examples from other skills:**
-- PDF skill: `fill_fillable_fields.py`, `extract_form_field_info.py` - utilities for PDF manipulation
-- DOCX skill: `document.py`, `utilities.py` - Python modules for document processing
-
-**Appropriate for:** Python scripts, shell scripts, or any executable code that performs automation, data processing, or specific operations.
-
-**Note:** Scripts may be executed without loading into context, but can still be read by Codex for patching or environment adjustments.
-
-### references/
-Documentation and reference material intended to be loaded into context to inform Codex's process and thinking.
-
-**Examples from other skills:**
-- Product management: `communication.md`, `context_building.md` - detailed workflow guides
-- BigQuery: API reference documentation and query examples
-- Finance: Schema documentation, company policies
-
-**Appropriate for:** In-depth documentation, API references, database schemas, comprehensive guides, or any detailed information that Codex should reference while working.
-
-### assets/
-Files not intended to be loaded into context, but rather used within the output Codex produces.
-
-**Examples from other skills:**
-- Brand styling: PowerPoint template files (.pptx), logo files
-- Frontend builder: HTML/React boilerplate project directories
-- Typography: Font files (.ttf, .woff2)
-
-**Appropriate for:** Templates, boilerplate code, document templates, images, icons, fonts, or any files meant to be copied or used in the final output.
-
----
-
-**Not every skill requires all three types of resources.**
+Default to dry-run before write. For PDF or binary sources, use a document/PDF extraction workflow first, save text or Markdown into `docs/raw/`, then import.
