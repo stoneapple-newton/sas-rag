@@ -15,22 +15,27 @@ As a developer, I want a persistent local Chroma index, so that indexed SAS docu
 
 ## Detail
 
-Create the local vector-store foundation for PI 1. The index should support repeatable local development and be configurable for tests.
+Create the local vector-store foundation for PI 1 using LangChain and persistent Chroma. The index should support repeatable local development and be configurable for tests.
 
 ## Acceptance Criteria
 
 - Chroma collection is created from ingested chunks.
-- Embedding provider is configurable with OpenAI as the default.
+- Chroma collection is created through the `langchain-chroma` integration.
+- Embedding provider is configurable through LangChain embeddings with OpenAI as the default.
 - Index path and collection name are configurable for local development and tests.
+- Retrieval smoke test uses the same embedding model that built the index.
 
 ## Implementation Notes
 
 - Keep indexing code separate from MCP transport.
+- Convert ingestion chunks to LangChain `Document` objects before indexing.
 - Store provenance metadata alongside embedded text.
 - Avoid hardcoding API keys, paths, or provider names outside config defaults.
+- Prefer dedicated LangChain packages over legacy community vector-store imports: `langchain-core`, `langchain-openai`, and `langchain-chroma`.
 
 ## Done Evidence
 
 - Index build command output.
 - Chroma collection metadata sample.
+- LangChain retriever smoke query output.
 - Local query proving persisted index reuse.

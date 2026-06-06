@@ -15,11 +15,12 @@ As a SAS RAG user, I want prioritized SAS 9.4 documentation indexed, so that com
 
 ## Detail
 
-Scale the proven ingestion slice to the P0 SAS 9.4 source whitelist. The batch should cover macro, PROC SQL, DATA step, language concepts, and base programming references.
+Scale the proven ingestion slice to the P0 SAS 9.4 source whitelist. The batch should cover macro, PROC SQL, DATA step, language concepts, and base programming references, then index the emitted chunks through LangChain into persistent local Chroma.
 
 ## Acceptance Criteria
 
 - Prioritized P0 source families from ING-001 are ingested.
+- P0 chunks are converted to LangChain `Document` records and written to Chroma through `langchain-chroma`.
 - Parse failure rate is reported and remains below the PI threshold for prioritized sources.
 - Ingestion report lists loaded, skipped, failed, and unchanged sources.
 - Retrieval smoke test covers macro, PROC SQL, DATA step, and language reference topics.
@@ -29,9 +30,12 @@ Scale the proven ingestion slice to the P0 SAS 9.4 source whitelist. The batch s
 - Batch execution must be repeatable.
 - Avoid adding community or third-party material in PI 1.
 - Persist source-level status for audit and troubleshooting.
+- Use one configured embedding model consistently for indexing and querying.
+- Store Chroma path and collection name in environment/config, defaulting to `data/chroma` and `sas_94_docs`.
 
 ## Done Evidence
 
 - Batch ingestion report.
 - Source coverage summary.
+- Chroma collection build report with indexed document count.
 - Smoke retrieval transcript for representative SAS topics.

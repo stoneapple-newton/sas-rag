@@ -5,12 +5,12 @@ Capability: Corpus ingestion and provenance
 Priority: P0
 Sprint target: Alpha/Beta
 Owner role: Data Engineer
-Status: Proposed
+Status: In Progress
 Dependencies: None
 
 ## Intent
 
-Load prioritized official SAS 9.4 documentation into the ingestion pipeline with repeatable source tracking and enough coverage to support the first retrieval benchmark.
+Load prioritized official SAS 9.4 documentation into the ingestion pipeline with repeatable source tracking and enough coverage to support the first retrieval benchmark. Indexing will use LangChain `Document` objects, configurable OpenAI embeddings, and persistent local Chroma via `langchain-chroma`.
 
 ## Stories
 
@@ -32,6 +32,11 @@ Acceptance criteria:
 - Each source entry has title, source URI, source family, SAS version, priority, and ingestion status.
 - Non-official and community sources are explicitly out of scope for PI 1.
 
+Current evidence:
+- `data/source_whitelist.json` defines the 22 local SAS PDF sources under `docs/sas-documents/`.
+- The first PDF ingestion run loaded all 22 sources and emitted 17,135 chunks from 16,698 parsed pages.
+- Local PDF paths are used as the source URI for this run; upstream official SAS URLs are a follow-up enrichment.
+
 ### ING-002 - Ingest one official SAS doc family end to end
 
 As a data engineer, I want one official SAS documentation family to ingest end to end, so that the pipeline proves source loading, parsing, chunking, embedding, and persistence before scaling out.
@@ -39,7 +44,7 @@ As a data engineer, I want one official SAS documentation family to ingest end t
 Acceptance criteria:
 - One whitelisted SAS 9.4 doc family is loaded from local or configured source input.
 - Pipeline emits chunks with provenance metadata and stable chunk IDs.
-- Chunks are written to the local Chroma index without duplicate records on a rerun.
+- Chunks are converted to LangChain `Document` records and written to the local Chroma index without duplicate records on a rerun.
 - A short demo query retrieves content from the ingested source.
 
 ### ING-003 - Ingest prioritized SAS 9.4 docs batch
@@ -48,6 +53,7 @@ As a SAS RAG user, I want prioritized SAS 9.4 documentation indexed, so that com
 
 Acceptance criteria:
 - Prioritized P0 source families from ING-001 are ingested.
+- P0 chunks are embedded through LangChain and persisted to local Chroma.
 - Parse failure rate is reported and remains below the PI threshold for prioritized sources.
 - Ingestion report lists loaded, skipped, failed, and unchanged sources.
 - Retrieval smoke test covers at least macro, PROC SQL, DATA step, and language reference topics.

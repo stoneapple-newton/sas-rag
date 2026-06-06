@@ -18,3 +18,6 @@ Related stories:
 
 Notes:
 - Provenance powers filtering, citations, benchmark labels, and MCP outputs.
+- The PDF ingestion run uses SHA-256 source file hashes as `content_hash`.
+- `source_uri` currently stores the repo-relative local PDF path, matching the ING-001 whitelist policy.
+- Page-level chunks set `section_path` to `<title> > Page <n>` until richer PDF heading extraction is added.

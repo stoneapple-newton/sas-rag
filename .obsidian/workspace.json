@@ -20,23 +20,28 @@
               "icon": "lucide-file",
               "title": "sas-rag-docs"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "f22248a49f00bcbf",
+        "type": "tabs",
+        "children": [
           {
-            "id": "ab782f6044316a1f",
+            "id": "98bca71011e7ba09",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/raw/sas-rag-docs.md",
+                "file": "data/ingestion/runs/latest/normalized/sqlproc.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "sas-rag-docs"
+              "title": "sqlproc"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/raw/sas-rag-docs.md",
+                "file": "data/ingestion/runs/latest/normalized/sqlproc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +124,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for sas-rag-docs"
+              "title": "Backlinks for sqlproc"
             }
           },
           {
@@ -128,12 +133,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/raw/sas-rag-docs.md",
+                "file": "data/ingestion/runs/latest/normalized/sqlproc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from sas-rag-docs"
+              "title": "Outgoing links from sqlproc"
             }
           },
           {
@@ -171,13 +176,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/raw/sas-rag-docs.md",
+                "file": "data/ingestion/runs/latest/normalized/sqlproc.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of sas-rag-docs"
+              "title": "Outline of sqlproc"
             }
           }
         ]
@@ -198,43 +203,43 @@
       "bases:Create new base": false
     }
   },
-  "active": "ab782f6044316a1f",
+  "active": "98bca71011e7ba09",
   "lastOpenFiles": [
-    "docs/sas-documents/lepg.pdf",
-    "docs/sas-documents/Unconfirmed 58135.crdownload",
-    "docs/sas-documents/gridref.pdf",
-    "docs/sas-documents/Unconfirmed 907189.crdownload",
-    "docs/sas-documents/lesysoptsref.pdf",
-    "docs/sas-documents/Unconfirmed 906422.crdownload",
-    "docs/sas-documents/lestmtsglobal.pdf",
-    "docs/sas-documents/Unconfirmed 805863.crdownload",
-    "docs/sas-documents/lebaseutilref.pdf",
-    "docs/sas-documents/Unconfirmed 577942.crdownload",
-    "docs/sas-documents/logug.pdf",
-    "safe/feature-official-sas-docs-ingestion.md",
-    "safe/README.md",
-    "safe/enabler/CHUNK-002-implement-sas-aware-code-boundary-detection.md",
-    "safe/enabler/CHUNK-001-implement-heading-aware-documentation-chunking.md",
-    "docs/wiki/chunking-research.md",
-    "docs/wiki/chunking-strategy.md",
-    "safe/feature-structure-aware-chunking.md",
-    "docs/raw/sas-rag-docs.md",
-    "docs/raw/Chunking research.md",
-    "docs/wiki/ci-quality-gates.md",
-    "docs/wiki/chroma-index.md",
-    "docs/wiki/tool-contracts.md",
-    "docs/wiki/security-model.md",
-    "docs/wiki/sas-rag-docs.md",
-    "safe/enabler/ING-004-add-checksum-and-re-ingestion-controls.md",
+    "data/ingestion/runs/latest/normalized/ds2ref.md",
+    "safe/feature/ING-002-ingest-one-official-sas-doc-family-end-to-end.md",
+    "data/ingestion/runs/latest/report.json",
+    "data/ingestion/runs/latest/chunks.jsonl",
+    "data/ingestion/runs/latest/normalized/sqlproc.md",
+    "data/ingestion/runs/latest/normalized/procstat.md",
+    "data/ingestion/runs/latest/normalized/proc.md",
+    "data/ingestion/runs/latest/normalized/odsgs.md",
+    "data/ingestion/runs/latest/normalized/movefile.md",
+    "data/ingestion/runs/latest/normalized/mcrolref.md",
+    "data/ingestion/runs/latest/normalized/logug.md",
+    "data/ingestion/runs/latest/normalized/lesysoptsref.md",
+    "data/ingestion/runs/latest/normalized/lestmtsref.md",
+    "data/ingestion/runs/latest/normalized/lestmtsglobal.md",
+    "data/ingestion/runs/latest/normalized/lepg.md",
+    "data/ingestion/runs/latest/normalized/lefunctionsref.md",
+    "data/ingestion/runs/latest/normalized/leforinforref.md",
+    "data/ingestion/runs/latest/normalized/ledsoptsref.md",
+    "data/ingestion/runs/latest/normalized/lecompobjref.md",
+    "data/ingestion/runs/latest/normalized/lebaseutilref.md",
+    "data/ingestion/runs/latest/normalized/gridref.md",
+    "data/ingestion/runs/latest/normalized/graphref.md",
+    "data/ingestion/runs/latest/normalized/ds2pg.md",
+    "data/ingestion/runs/latest/normalized/acreldb.md",
+    "data/ingestion/runs/latest/normalized/acpcref.md",
+    "data/ingestion/runs/latest/normalized",
+    "data/ingestion/runs/latest",
+    "data/ingestion/runs",
+    "data/ingestion",
+    "tests/__pycache__/test_ingestion.cpython-313-pytest-9.0.3.pyc",
+    "tests/__pycache__",
+    "src/sas_rag/ingestion/__pycache__/whitelist.cpython-313.pyc",
+    "src/sas_rag/ingestion/__pycache__/pdf_adapter.cpython-313.pyc",
     "safe/enabler/ING-001-define-sas-94-source-whitelist.md",
-    "safe/enabler/CITE-003-add-unsupported-answer-refusal-rule.md",
-    "safe/enabler/PARSE-001-create-loader-adapter-interface-for-html-pdf-text.md",
-    "docs/wiki/ingestion-pipeline.md",
-    "safe/enabler/README.md",
-    "docs/log.md",
-    "docs/README.md",
-    "safe/feature/DEV-001-add-one-command-local-setup-run-path.md",
-    "safe/Overall-structure.md",
-    "README.md"
+    "safe/README.md",
+    "safe/Overall-structure.md"
   ]
 }

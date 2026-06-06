@@ -9,5 +9,6 @@ Related stories:
 
 Notes:
 - Do not commit API keys or tracing credentials.
+- Use `example.env` for placeholder variable names and `.env` for real local values.
 - Do not add write-capable MCP tools in PI 1.
 - Review prompt-injection and local index exposure risks before release.

@@ -10,3 +10,7 @@ Related stories:
 Notes:
 - Retrieval logic should stay separate from MCP transport.
 - Results must include citation-ready provenance.
+- PI 1 semantic retrieval uses LangChain retrievers over persistent Chroma.
+- Index construction uses `langchain-chroma` and configurable LangChain embeddings, defaulting to OpenAI.
+- Metadata filters should use fields emitted by ingestion: `source_family`, `priority`, `version`, `source_type`, `page`, and `section_path`.
+- Exact SAS identifiers still need lexical fallback in addition to Chroma similarity search.

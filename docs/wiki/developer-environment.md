@@ -8,4 +8,8 @@ Related stories:
 
 Notes:
 - Install dependencies with `uv sync`.
-- Run the current entry point with `uv run python main.py` until replaced by a documented command.
+- Copy `example.env` to `.env` for local secrets and machine-specific paths.
+- Keep `.env` untracked; `.gitignore` excludes it.
+- Run PDF ingestion with `uv run python -m sas_rag.ingestion.cli ingest-pdfs --source-dir docs/sas-documents --whitelist data/source_whitelist.json --out data/ingestion/runs/latest`.
+- Planned LangChain/Chroma indexing dependencies: `langchain-core`, `langchain-openai`, `langchain-chroma`, and Chroma runtime dependencies.
+- Keep `OPENAI_API_KEY`, `OPENAI_EMBEDDING_MODEL`, `SAS_RAG_CHROMA_PATH`, and `SAS_RAG_CHROMA_COLLECTION` in `.env`.
