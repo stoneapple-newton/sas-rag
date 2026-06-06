@@ -1,0 +1,217 @@
+{
+  "main": {
+    "id": "c269a83479dbe14f",
+    "type": "split",
+    "children": [
+      {
+        "id": "fb424b9ab6798688",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "068a17fd9fb17368",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "safe/feature/DEV-001-add-one-command-local-setup-run-path.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DEV-001-add-one-command-local-setup-run-path"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "91822a71e6a5f774",
+    "type": "split",
+    "children": [
+      {
+        "id": "847205895ed4e598",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "52ae5d65c069714d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "add5903fd2371ca0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "34c6c24db2f37eff",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "af26dd8754548c08",
+    "type": "split",
+    "children": [
+      {
+        "id": "63a7c8011542dd36",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d3d628d6131ddce2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "safe/feature/DEV-001-add-one-command-local-setup-run-path.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for DEV-001-add-one-command-local-setup-run-path"
+            }
+          },
+          {
+            "id": "38b0c15f48d9063d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "safe/feature/DEV-001-add-one-command-local-setup-run-path.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from DEV-001-add-one-command-local-setup-run-path"
+            }
+          },
+          {
+            "id": "3d1a16e28d926ec3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "8d5567e4c77a7f4d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "7a2f055ffd448780",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "safe/feature/DEV-001-add-one-command-local-setup-run-path.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of DEV-001-add-one-command-local-setup-run-path"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "068a17fd9fb17368",
+  "lastOpenFiles": [
+    "safe/Overall-structure.md",
+    "docs/wiki/ingestion-pipeline.md",
+    "README.md",
+    "safe/enabler/CHUNK-001-implement-heading-aware-documentation-chunking.md",
+    "docs/wiki/chunking-strategy.md",
+    "safe/feature/RET-001-create-chroma-backed-vector-index.md",
+    "docs/wiki/chroma-index.md",
+    "safe/feature/CI-001-add-lint-unit-test-workflow.md",
+    "docs/wiki/evaluation-benchmark.md",
+    "docs/wiki/developer-environment.md",
+    "docs/wiki/citation-grounding.md",
+    "docs/wiki/ci-quality-gates.md",
+    "docs/wiki/sas-corpus.md",
+    "docs/wiki/security-model.md",
+    "docs/wiki/observability-and-evals.md",
+    "docs/wiki/tool-contracts.md",
+    "docs/wiki/mcp-server.md",
+    "docs/wiki/retrieval-architecture.md",
+    "docs/wiki/provenance-schema.md",
+    "docs/wiki/README.md",
+    "safe/enabler/SEC-003-verify-read-only-least-privilege-tool-behavior.md",
+    "safe/enabler/SEC-002-threat-model-local-mcp-tool-surface.md",
+    "safe/enabler/SEC-001-document-secret-handling-and-env-var-policy.md",
+    "safe/enabler/SCHEMA-002-add-mcp-contract-tests.md",
+    "safe/enabler/SCHEMA-001-define-versioned-mcp-tool-schemas.md",
+    "safe/enabler/EVAL-003-add-regression-threshold-report.md",
+    "safe/feature",
+    "safe/enabler"
+  ]
+}

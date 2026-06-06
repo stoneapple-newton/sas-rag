@@ -1,0 +1,4 @@
+interface:
+  display_name: "SAFe Wiki Manager"
+  short_description: "Maintain SAS RAG SAFe backlog and Karpathy-style wiki files."
+  default_prompt: "Use this skill to update SAFe planning files, wiki pages, and raw-to-wiki imports for the SAS RAG MCP project."

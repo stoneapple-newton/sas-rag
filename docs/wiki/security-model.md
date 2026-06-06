@@ -1,0 +1,13 @@
+# Security Model
+
+PI 1 assumes local, read-only MCP tools and environment-based secrets.
+
+Related stories:
+- [SEC-001](../../safe/enabler/SEC-001-document-secret-handling-and-env-var-policy.md)
+- [SEC-002](../../safe/enabler/SEC-002-threat-model-local-mcp-tool-surface.md)
+- [SEC-003](../../safe/enabler/SEC-003-verify-read-only-least-privilege-tool-behavior.md)
+
+Notes:
+- Do not commit API keys or tracing credentials.
+- Do not add write-capable MCP tools in PI 1.
+- Review prompt-injection and local index exposure risks before release.
