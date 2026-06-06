@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/wiki/chunking-research.md",
+                "file": "docs/raw/sas-rag-docs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chunking-research"
+              "title": "sas-rag-docs"
             }
           }
         ],
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/wiki/chunking-research.md",
+                "file": "docs/raw/sas-rag-docs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for chunking-research"
+              "title": "Backlinks for sas-rag-docs"
             }
           },
           {
@@ -128,12 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/wiki/chunking-research.md",
+                "file": "docs/raw/sas-rag-docs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from chunking-research"
+              "title": "Outgoing links from sas-rag-docs"
             }
           },
           {
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/wiki/chunking-research.md",
+                "file": "docs/raw/sas-rag-docs.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of chunking-research"
+              "title": "Outline of sas-rag-docs"
             }
           }
         ]
@@ -200,10 +200,24 @@
   },
   "active": "ab782f6044316a1f",
   "lastOpenFiles": [
-    "docs/wiki/chunking-strategy.md",
+    "docs/sas-documents/lepg.pdf",
+    "docs/sas-documents/Unconfirmed 58135.crdownload",
+    "docs/sas-documents/gridref.pdf",
+    "docs/sas-documents/Unconfirmed 907189.crdownload",
+    "docs/sas-documents/lesysoptsref.pdf",
+    "docs/sas-documents/Unconfirmed 906422.crdownload",
+    "docs/sas-documents/lestmtsglobal.pdf",
+    "docs/sas-documents/Unconfirmed 805863.crdownload",
+    "docs/sas-documents/lebaseutilref.pdf",
+    "docs/sas-documents/Unconfirmed 577942.crdownload",
+    "docs/sas-documents/logug.pdf",
+    "safe/feature-official-sas-docs-ingestion.md",
+    "safe/README.md",
+    "safe/enabler/CHUNK-002-implement-sas-aware-code-boundary-detection.md",
     "safe/enabler/CHUNK-001-implement-heading-aware-documentation-chunking.md",
-    "safe/feature-structure-aware-chunking.md",
     "docs/wiki/chunking-research.md",
+    "docs/wiki/chunking-strategy.md",
+    "safe/feature-structure-aware-chunking.md",
     "docs/raw/sas-rag-docs.md",
     "docs/raw/Chunking research.md",
     "docs/wiki/ci-quality-gates.md",
@@ -213,10 +227,7 @@
     "docs/wiki/sas-rag-docs.md",
     "safe/enabler/ING-004-add-checksum-and-re-ingestion-controls.md",
     "safe/enabler/ING-001-define-sas-94-source-whitelist.md",
-    "safe/README.md",
-    "safe/enabler/CHUNK-002-implement-sas-aware-code-boundary-detection.md",
     "safe/enabler/CITE-003-add-unsupported-answer-refusal-rule.md",
-    "docs/raw/Unconfirmed 772780.crdownload",
     "safe/enabler/PARSE-001-create-loader-adapter-interface-for-html-pdf-text.md",
     "docs/wiki/ingestion-pipeline.md",
     "safe/enabler/README.md",
@@ -224,10 +235,6 @@
     "docs/README.md",
     "safe/feature/DEV-001-add-one-command-local-setup-run-path.md",
     "safe/Overall-structure.md",
-    "README.md",
-    "safe/feature/RET-001-create-chroma-backed-vector-index.md",
-    "safe/feature/CI-001-add-lint-unit-test-workflow.md",
-    "safe/feature",
-    "safe/enabler"
+    "README.md"
   ]
 }

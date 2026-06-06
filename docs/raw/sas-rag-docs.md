@@ -28,17 +28,17 @@ A practical scoping rule for the MVP is this: the app should answer **syntax, se
 
 A short list of official implementation references you will likely want in the repository from day one is below.
 
-| Reference | URL |
-|---|---|
-| LangChain retrieval docs | `https://docs.langchain.com/oss/python/langchain/retrieval` |
-| LangChain RAG tutorial | `https://docs.langchain.com/oss/python/langchain/rag` |
-| LangSmith evaluation docs | `https://docs.langchain.com/langsmith/evaluation` |
-| MCP specification | `https://modelcontextprotocol.io/specification/2025-03-26` |
-| MCP tools page | `https://modelcontextprotocol.io/specification/2025-06-18/server/tools` |
-| MCP resources page | `https://modelcontextprotocol.io/specification/2025-06-18/server/resources` |
-| MCP prompts page | `https://modelcontextprotocol.io/specification/2025-06-18/server/prompts` |
-| MarkItDown | `https://github.com/microsoft/markitdown` |
-| SAS documentation home | `https://support.sas.com/en/documentation.html` |
+| Reference                 | URL                                                                         |
+| ------------------------- | --------------------------------------------------------------------------- |
+| LangChain retrieval docs  | `https://docs.langchain.com/oss/python/langchain/retrieval`                 |
+| LangChain RAG tutorial    | `https://docs.langchain.com/oss/python/langchain/rag`                       |
+| LangSmith evaluation docs | `https://docs.langchain.com/langsmith/evaluation`                           |
+| MCP specification         | `https://modelcontextprotocol.io/specification/2025-03-26`                  |
+| MCP tools page            | `https://modelcontextprotocol.io/specification/2025-06-18/server/tools`     |
+| MCP resources page        | `https://modelcontextprotocol.io/specification/2025-06-18/server/resources` |
+| MCP prompts page          | `https://modelcontextprotocol.io/specification/2025-06-18/server/prompts`   |
+| MarkItDown                | `https://github.com/microsoft/markitdown`                                   |
+| SAS documentation home    | `https://support.sas.com/en/documentation.html`                             |
 
 These are all official sources for the frameworks and standards involved. citeturn18search0turn18search14turn18search1turn18search9turn18search2turn18search13turn18search6turn19search0turn5search4
 
