@@ -3,8 +3,10 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import pytest
+
 from sas_rag.ingestion.chunker import chunk_unit, stable_chunk_id
-from sas_rag.ingestion.models import NormalizedUnit, SourceRecord
+from sas_rag.ingestion.models.records import NormalizedUnit, SourceRecord
 from sas_rag.ingestion.whitelist import load_whitelist
 
 
@@ -49,7 +51,46 @@ def test_chunk_unit_emits_required_provenance() -> None:
 
     chunks = chunk_unit(unit, source_content_hash="abc123", max_chars=4000)
 
-    assert len(chunks) == 1
-    chunks[0].validate_provenance()
-    assert chunks[0].metadata["source_uri"] == "docs/sas-documents/sqlproc.pdf"
-    assert chunks[0].metadata["version"] == "9.4"
+    # Heading-aware chunking splits on "# Title" and "## Page 1" headings
+    assert len(chunks) == 2
+    for chunk in chunks:
+        chunk.validate_provenance()
+        assert chunk.metadata["source_uri"] == "docs/sas-documents/sqlproc.pdf"
+        assert chunk.metadata["version"] == "9.4"
+
+    # Second chunk should contain the PROC SQL content and have SAS block metadata
+    content_chunk = chunks[1]
+    assert "PROC SQL" in content_chunk.text
+    assert content_chunk.metadata.get("sas_block_count") == 1
+    assert content_chunk.metadata.get("sas_block_types") == ["proc"]
+
+
+def test_chunk_validate_provenance_fails_on_missing_fields() -> None:
+    from sas_rag.ingestion.models.records import ChunkRecord
+
+    incomplete = ChunkRecord(
+        chunk_id="bad-chunk",
+        text="incomplete",
+        metadata={"chunk_id": "bad-chunk", "source_uri": "test"},
+    )
+    with pytest.raises(ValueError, match="missing metadata fields"):
+        incomplete.validate_provenance()
+
+
+def test_chunk_validate_provenance_passes_when_complete() -> None:
+    from sas_rag.ingestion.models.records import ChunkRecord
+
+    complete = ChunkRecord(
+        chunk_id="good-chunk",
+        text="complete",
+        metadata={
+            "chunk_id": "good-chunk",
+            "source_uri": "docs/test.pdf",
+            "title": "Test",
+            "version": "9.4",
+            "section_path": "Test > Page 1",
+            "source_type": "pdf",
+            "content_hash": "abc123",
+        },
+    )
+    complete.validate_provenance()

@@ -15,5 +15,6 @@ Notes:
 - Keep `OPENAI_API_KEY`, `OPENAI_EMBEDDING_MODEL`, `SAS_RAG_CHROMA_PATH`, and `SAS_RAG_CHROMA_COLLECTION` in `.env`.
 - Run P0 Chroma indexing with `uv run python -m sas_rag.ingestion.cli index-chroma --chunks data/ingestion/runs/latest/chunks.jsonl --priority P0 --reset`.
 - Run a smoke query with `uv run python -m sas_rag.ingestion.cli query-chroma "PROC SQL join syntax" --k 3`.
-- Current CLI commands: `ingest-pdfs`, `index-chroma`, and `query-chroma`.
+- Official entry point: `uv run python -m sas_rag.ingestion.cli` (subcommands: `ingest-pdfs`, `index-chroma`, `query-chroma`).
 - Generated artifacts under `data/ingestion/runs/`, `data/chroma/`, and `*.egg-info/` are ignored.
+- CI runs `uv run ruff check .` and `uv run pytest` on every PR.

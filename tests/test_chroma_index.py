@@ -77,10 +77,10 @@ def test_document_ids_require_chunk_id() -> None:
 
 
 def test_create_openai_embeddings_requires_api_key(monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    monkeypatch.setattr("sas_rag.config.settings.openai_api_key", "")
 
     with pytest.raises(RuntimeError, match="OPENAI_API_KEY"):
-        create_openai_embeddings(load_env=False)
+        create_openai_embeddings()
 
 
 def test_index_chunks_to_chroma_and_query(tmp_path: Path) -> None:
@@ -111,3 +111,34 @@ def test_index_chunks_to_chroma_and_query(tmp_path: Path) -> None:
     assert len(results) == 1
     assert results[0]["metadata"]["chunk_id"] == "p0-a"
     assert results[0]["metadata"]["priority"] == "P0"
+
+
+def test_index_chunks_to_chroma_skips_duplicates_on_rerun(tmp_path: Path) -> None:
+    persist_directory = tmp_path / "chroma"
+    chunks_path = _chunks_path(tmp_path)
+
+    first_report = index_chunks_to_chroma(
+        chunks_path=chunks_path,
+        persist_directory=persist_directory,
+        collection_name="test_collection",
+        embeddings=FakeEmbeddings(),
+        embedding_model="fake",
+        priority="P0",
+        reset=True,
+        batch_size=1,
+    )
+    assert first_report.indexed_chunks == 2
+    assert first_report.duplicate_chunks == 0
+
+    second_report = index_chunks_to_chroma(
+        chunks_path=chunks_path,
+        persist_directory=persist_directory,
+        collection_name="test_collection",
+        embeddings=FakeEmbeddings(),
+        embedding_model="fake",
+        priority="P0",
+        reset=False,
+        batch_size=1,
+    )
+    assert second_report.indexed_chunks == 0
+    assert second_report.duplicate_chunks == 2

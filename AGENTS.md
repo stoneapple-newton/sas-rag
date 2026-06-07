@@ -62,6 +62,23 @@ PI 1 MCP constraints:
 - `docs/log.md`: documentation changes, raw imports, decisions, and follow-ups
 - Keep both human-readable and LLM-parseable
 
+## Logging Requirements
+
+- Every module must use `logging.getLogger(__name__)`.
+- Log at INFO for operation start/end and key metrics.
+- Log at DEBUG for internal decisions, counts, and data samples.
+- Never log secrets, API keys, or credentials.
+- Use structured JSON logging via `sas_rag.logging_config.JSONFormatter`.
+- Logs write to both console (INFO+) and `logs/sas-rag.log` (DEBUG+).
+- Initialize logging at application startup with `configure_logging()`.
+
+## Configuration and Validation
+
+- Use Pydantic v2 for all configuration schemas, API contracts, and input validation.
+- Use `pydantic-settings` for environment-based configuration (reads `.env` automatically).
+- Prefer explicit config objects over scattered `os.getenv` calls.
+- Keep existing dataclasses for simple internal data records unless validation is needed.
+
 ## Planning and Wiki Maintenance
 
 - Use the `safe-wiki-manager` skill when updating SAFe files, wiki pages, raw-to-wiki imports, docs indexes, or docs logs.

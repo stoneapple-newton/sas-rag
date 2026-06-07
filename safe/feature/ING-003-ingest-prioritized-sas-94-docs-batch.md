@@ -40,4 +40,4 @@ Scale the proven ingestion slice to the P0 SAS 9.4 source whitelist. The batch s
 - Chroma collection build report: `data/ingestion/runs/latest/chroma_report.json`.
 - First P0 index run: 8,953 chunks indexed to `sas_94_docs`; 8,182 non-P0 chunks skipped.
 - Smoke retrieval evidence exists for PROC SQL joins.
-- Remaining evidence: add smoke retrieval transcripts for macro, DATA step, and language reference topics.
+- Sprint Beta carryover: complete smoke retrieval transcripts for macro, DATA step, and language reference topics.

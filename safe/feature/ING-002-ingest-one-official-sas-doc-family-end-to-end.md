@@ -5,7 +5,7 @@ Parent: [Official SAS Docs Ingestion](../feature-official-sas-docs-ingestion.md)
 Capability: Corpus ingestion and provenance
 Sprint: Alpha
 Points: 5
-Status: In Progress
+Status: Done
 Dependencies: ING-001, PARSE-001, PROV-001
 Wiki: [SAS Corpus](../../docs/wiki/sas-corpus.md), [Ingestion Pipeline](../../docs/wiki/ingestion-pipeline.md), [Provenance Schema](../../docs/wiki/provenance-schema.md)
 
@@ -40,4 +40,5 @@ Use a single whitelisted SAS 9.4 documentation family as the vertical slice. The
 - Chroma index report: `data/ingestion/runs/latest/chroma_report.json`.
 - Current evidence: P0 chunks are converted to LangChain documents and indexed through `langchain-chroma`.
 - Smoke query `PROC SQL join syntax` returned citation metadata from the SAS SQL Procedure User's Guide.
-- Remaining evidence: prove rerun duplicate behavior without resetting the collection.
+- Rerun without `--reset` skips duplicates: `ChromaIndexReport.duplicate_chunks` tracks skipped duplicates.
+- Test: `test_index_chunks_to_chroma_skips_duplicates_on_rerun` in `tests/test_chroma_index.py`.

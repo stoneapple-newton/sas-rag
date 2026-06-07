@@ -4,5 +4,20 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 .pytest_cache/
+
+# Logs
+logs/
+*.log
+
+# Generated artifacts (do not commit ingestion outputs, vector indexes, or explanations)
 data/ingestion/runs/
 data/chroma/
+data/explanations/
+
+# SQLite/Chroma vector database files
+*.sqlite3
+*.db
+
+# OS files
+.DS_Store
+Thumbs.db

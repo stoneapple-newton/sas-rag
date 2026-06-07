@@ -10,3 +10,4 @@ Related stories:
 Notes:
 - Tracing must be optional and config-driven.
 - Do not log secrets or unrelated user file contents.
+- LangSmith tracing implementation is deferred to Sprint Gamma (OBS-002).

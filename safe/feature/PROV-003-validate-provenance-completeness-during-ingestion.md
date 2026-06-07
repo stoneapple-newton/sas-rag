@@ -5,7 +5,7 @@ Parent: [Provenance Schema](../feature-provenance-schema.md)
 Capability: Corpus ingestion and provenance
 Sprint: Beta
 Points: 3
-Status: Proposed
+Status: Done
 Dependencies: PROV-002
 Wiki: [Provenance Schema](../../docs/wiki/provenance-schema.md), [Ingestion Pipeline](../../docs/wiki/ingestion-pipeline.md)
 

@@ -5,7 +5,7 @@ Parent: [Provenance Schema](../feature-provenance-schema.md)
 Capability: Corpus ingestion and provenance
 Sprint: Alpha
 Points: 5
-Status: Proposed
+Status: Done
 Dependencies: PROV-001, PARSE-001
 Wiki: [Provenance Schema](../../docs/wiki/provenance-schema.md), [Citation Grounding](../../docs/wiki/citation-grounding.md)
 
@@ -31,6 +31,7 @@ Wire the required provenance schema into parser and chunker outputs. Provenance 
 
 ## Done Evidence
 
-- Sample chunk JSON or debug output.
-- Validation failure example for missing metadata.
-- Successful retrieval result showing provenance fields.
+- `chunk_unit()` in `src/sas_rag/ingestion/chunker.py` emits all required provenance fields.
+- `validate_provenance()` called on every emitted chunk; missing fields raise `ValueError`.
+- `stable_chunk_id()` produces deterministic IDs from `(source_id, section_path, ordinal, content_hash)`.
+- Sample provenance available in `data/ingestion/runs/latest/chunks.jsonl`.

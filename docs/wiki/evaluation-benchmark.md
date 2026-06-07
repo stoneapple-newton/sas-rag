@@ -1,12 +1,55 @@
-# Evaluation Benchmark
+# SAS 9.4 Benchmark Dataset
 
-The PI 1 benchmark measures retrieval and citation quality for official SAS 9.4 documentation.
+Curated benchmark questions for evaluating SAS RAG retrieval and grounding quality.
 
-Related stories:
-- [EVAL-001](../../safe/enabler/EVAL-001-create-50-question-sas-benchmark-dataset.md)
-- [EVAL-002](../../safe/enabler/EVAL-002-add-recall5-and-citation-accuracy-checks.md)
-- [EVAL-003](../../safe/enabler/EVAL-003-add-regression-threshold-report.md)
+## Dataset Overview
 
-Notes:
-- Start with 50 questions across macro, PROC SQL, DATA step, language concepts, and base programming.
-- Include unsupported or weak-evidence questions.
+- **Total questions**: 53
+- **Supported questions**: 48
+- **Unsupported questions**: 5
+- **Coverage**: macro, proc-sql, data-step, language-reference, procedures, language-concepts, base-programming
+
+## Topic Distribution
+
+| Topic | Count |
+|---|---|
+| macro | 9 |
+| proc-sql | 9 |
+| data-step | 8 |
+| language-reference | 10 |
+| procedures | 7 |
+| language-concepts | 5 |
+| unsupported | 5 |
+
+## Difficulty Distribution
+
+| Difficulty | Count |
+|---|---|
+| beginner | 16 |
+| intermediate | 25 |
+| advanced | 12 |
+
+## Unsupported Questions
+
+Five intentionally unsupported questions test refusal behavior:
+- Quantum computing in SAS
+- Blockchain verification in BASE SAS
+- PROC TELEPATHY
+- Time reversal PROC
+- Lottery prediction PROC
+
+## File Location
+
+`data/benchmark/sas_questions.json`
+
+## Schema
+
+Each question entry includes:
+- `id`: Unique identifier
+- `question`: Query text
+- `topic`: Category/topic
+- `difficulty`: beginner, intermediate, advanced
+- `expected_source_family`: Expected primary source family
+- `expected_evidence`: Description of expected supporting evidence
+- `unsupported`: Boolean flag for weak-evidence questions
+- `notes`: Optional context

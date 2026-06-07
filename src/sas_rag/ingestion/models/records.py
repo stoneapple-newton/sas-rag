@@ -74,6 +74,7 @@ class SourceReport:
     status: str
     pages_loaded: int = 0
     chunks_emitted: int = 0
+    chunks_rejected: int = 0
     content_hash: str | None = None
     error: str | None = None
 
@@ -93,6 +94,7 @@ class IngestionReport:
         for source in self.sources:
             statuses[source.status] = statuses.get(source.status, 0) + 1
         statuses["chunks_emitted"] = sum(source.chunks_emitted for source in self.sources)
+        statuses["chunks_rejected"] = sum(source.chunks_rejected for source in self.sources)
         statuses["pages_loaded"] = sum(source.pages_loaded for source in self.sources)
         return statuses
 

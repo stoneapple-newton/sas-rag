@@ -5,7 +5,7 @@ Parent: [GitHub Actions CI](../feature-github-actions-ci.md)
 Capability: Delivery and operations
 Sprint: Alpha
 Points: 3
-Status: Proposed
+Status: Done
 Dependencies: DEV-001
 Wiki: [CI Quality Gates](../../docs/wiki/ci-quality-gates.md), [Developer Environment](../../docs/wiki/developer-environment.md)
 
@@ -31,6 +31,6 @@ Add the first CI workflow for dependency installation and local checks. The work
 
 ## Done Evidence
 
-- CI workflow file.
-- Passing workflow run or local equivalent.
-- README or developer doc update.
+- CI workflow file: `.github/workflows/ci.yml`.
+- Runs `uv sync`, `uv run ruff check .`, and `uv run pytest` on push/PR to `main`.
+- `pyproject.toml` includes `ruff` and `pytest` in `[dependency-groups] dev`.

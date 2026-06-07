@@ -5,7 +5,7 @@ Parent: [Dockerized Local Environment](../feature-dockerized-local-environment.m
 Capability: Delivery and operations
 Sprint: Alpha
 Points: 5
-Status: Proposed
+Status: Done
 Dependencies: None
 Wiki: [Developer Environment](../../docs/wiki/developer-environment.md)
 
@@ -31,6 +31,6 @@ Define the first reliable local developer workflow using `uv`, the existing Pyth
 
 ## Done Evidence
 
-- Local setup instructions.
-- Successful local run output.
-- Documented required environment variables.
+- Local setup instructions in `docs/wiki/developer-environment.md`.
+- Official entry point documented: `uv run python -m sas_rag.ingestion.cli` (subcommands: `ingest-pdfs`, `index-chroma`, `query-chroma`).
+- `uv sync` installs dependencies; `example.env` documents required variables.

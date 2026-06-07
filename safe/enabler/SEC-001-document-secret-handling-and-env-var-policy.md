@@ -5,7 +5,7 @@ Parent: [Security and Secret Management](../enabler-security-secret-management.m
 Capability: Delivery and operations
 Sprint: Alpha
 Points: 3
-Status: Proposed
+Status: Done
 Dependencies: None
 Wiki: [Security Model](../../docs/wiki/security-model.md), [Developer Environment](../../docs/wiki/developer-environment.md)
 
@@ -31,6 +31,7 @@ Define how local developers provide model, embedding, and tracing credentials. T
 
 ## Done Evidence
 
-- Secret policy note.
-- `.gitignore` or equivalent review where applicable.
-- Local setup documentation references policy.
+- Secret policy in `docs/wiki/security-model.md`.
+- `.gitignore` excludes `.env`.
+- `example.env` documents placeholder variables without real values.
+- `create_openai_embeddings()` loads from environment; no hardcoded keys.
