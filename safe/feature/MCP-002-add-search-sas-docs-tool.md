@@ -5,7 +5,7 @@ Parent: [Local Stdio MCP Tools](../feature-local-stdio-mcp-tools.md)
 Capability: MCP interaction layer
 Sprint: Gamma
 Points: 5
-Status: Done
+Status: Proposed
 Dependencies: MCP-001, RET-002
 Wiki: [MCP Server](../../docs/wiki/mcp-server.md), [Tool Contracts](../../docs/wiki/tool-contracts.md)
 
@@ -31,7 +31,6 @@ Expose semantic retrieval through a read-only MCP tool. This is the primary tool
 
 ## Done Evidence
 
-- Contract tests pass in `tests/test_mcp_contracts.py`.
-- Example request: `{"query": "PROC SQL join syntax", "top_k": 1, "filters": {"source_family": "proc-sql"}}`.
-- Example response includes `schema_version: "1.0"`, ranked result text, citation metadata, and chunk ID.
-- Local stdio MCP smoke call on 2026-06-07 returned cited PROC SQL Procedure User's Guide chunk `d45ef63bda8acda13d278b99`.
+- Contract test output.
+- Example MCP tool request and response.
+- Local Codex/client smoke call.

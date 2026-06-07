@@ -5,7 +5,7 @@ Parent: [Parser Adapter Layer](../enabler-parser-adapter-layer.md)
 Capability: Corpus ingestion and provenance
 Sprint: Beta
 Points: 3
-Status: Done
+Status: Proposed
 Dependencies: PARSE-001
 Wiki: [Ingestion Pipeline](../../docs/wiki/ingestion-pipeline.md)
 

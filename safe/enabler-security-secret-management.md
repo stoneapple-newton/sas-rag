@@ -5,7 +5,7 @@ Capability: Delivery and operations
 Priority: P0
 Sprint target: Alpha/Gamma/Delta
 Owner role: DevOps/SRE
-Status: In Progress
+Status: Proposed
 Dependencies: None
 
 ## Intent
@@ -54,8 +54,3 @@ Acceptance criteria:
 - Secret policy is documented.
 - MCP tool surface has a threat model.
 - PI 1 release has no write-capable MCP tools.
-
-Current status:
-- SEC-001 is Done.
-- SEC-002 is Ready for Gamma.
-- Current MCP tool surface is read-only: `search_sas_docs`.

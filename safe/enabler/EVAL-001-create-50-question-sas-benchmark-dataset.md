@@ -5,7 +5,7 @@ Parent: [Benchmark Dataset](../enabler-benchmark-dataset.md)
 Capability: Retrieval and grounding
 Sprint: Beta
 Points: 8
-Status: Done
+Status: Proposed
 Dependencies: ING-001, PROV-001
 Wiki: [Evaluation Benchmark](../../docs/wiki/evaluation-benchmark.md), [SAS Corpus](../../docs/wiki/sas-corpus.md)
 

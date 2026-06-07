@@ -12,11 +12,3 @@ Related stories:
 Notes:
 - Keep MCP tools read-only for PI 1.
 - Keep retrieval and answer composition behind service boundaries.
-- Local server package: `sas_rag.mcp_server`.
-- Local stdio command: `uv run sas-rag-mcp`.
-- Project-local Codex config: `.codex/config.toml` registers MCP server `sas_rag`.
-- Startup validates `OPENAI_API_KEY` and `data/chroma/chroma.sqlite3`.
-- Console logs go to stderr so stdout remains reserved for MCP JSON-RPC.
-- Current tool: `search_sas_docs`.
-- 2026-06-07 stdio smoke listed `search_sas_docs` through an MCP client session.
-- 2026-06-07 live stdio tool call for `PROC SQL join syntax` returned cited chunk `d45ef63bda8acda13d278b99` from SAS SQL Procedure User's Guide.

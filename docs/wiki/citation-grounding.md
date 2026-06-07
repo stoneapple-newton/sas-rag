@@ -10,7 +10,3 @@ Related stories:
 Notes:
 - Citations must be generated from provenance metadata.
 - Unsupported answers should be explicit and testable.
-- Current retrieval citation helper: `sas_rag.retrieval.search.format_citation()`.
-- Current MCP `search_sas_docs` response includes citation fields from provenance metadata.
-- CITE-001 is Done; CITE-002 and CITE-003 are Ready for Gamma.
-- Unsupported question coverage starts in `data/benchmark/sas_questions.json`.

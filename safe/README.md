@@ -40,17 +40,6 @@ Individual story files live in [feature/](feature/README.md) and [enabler/](enab
 | Gamma  | MCP server, tool contracts, retrieval hardening, traces, threat model      | RET-003, CITE-002, CITE-003, EVAL-002, MCP-001, MCP-002, MCP-003, MCP-004, SCHEMA-001, SCHEMA-002, OBS-002, SEC-002 |
 | Delta  | Final MCP tool, regression gate, Docker, CI evals, least privilege         | EVAL-003, MCP-005, OBS-003, DEV-002, CI-002, SEC-003                                                                |
 
-## Current sprint status
-
-- Alpha is closed.
-- Beta implementation is closed for ING/PROV/PARSE/CHUNK/RET-002/CITE-001/EVAL-001; ING-003 live smoke evidence was completed during Gamma start.
-- Gamma is started.
-- Done in Gamma: MCP-001, MCP-002.
-- In progress in Gamma: SCHEMA-001, SCHEMA-002.
-- Ready for Gamma: RET-003, CITE-002, CITE-003, EVAL-002, MCP-003, MCP-004, OBS-002, SEC-002.
-- Current local Chroma collection: `sas_94_docs` at `data/chroma`, with 8,953 P0 chunks indexed.
-- Current MCP command: `uv run sas-rag-mcp`.
-
 ## Definition of Done
 
 - Acceptance criteria are met.

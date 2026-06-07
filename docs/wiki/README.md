@@ -18,5 +18,3 @@ Minimal project wiki for research notes, architecture decisions, and planning co
 - [Security Model](security-model.md)
 - [SAS RAG Docs](sas-rag-docs.md)
 - [Chunking Research](chunking-research.md)
-- [SAS ETL Example Analysis](sas-etl-example-analysis.md)
-- [SAS ETL Example Direct Analysis](sas-etl-example-direct-analysis.md)

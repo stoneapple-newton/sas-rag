@@ -5,7 +5,7 @@ Parent: [Parser Adapter Layer](../enabler-parser-adapter-layer.md)
 Capability: Corpus ingestion and provenance
 Sprint: Alpha
 Points: 5
-Status: Done
+Status: Proposed
 Dependencies: ING-001
 Wiki: [Ingestion Pipeline](../../docs/wiki/ingestion-pipeline.md), [SAS Corpus](../../docs/wiki/sas-corpus.md)
 
@@ -31,6 +31,6 @@ Create a parser boundary that accepts source metadata and emits normalized docum
 
 ## Done Evidence
 
-- `SourceAdapter` Protocol defined in `src/sas_rag/ingestion/pdf_adapter.py`.
-- `PdfAdapter` implements `SourceAdapter` with `source_type = "pdf"` and `load()` method.
-- `run_ingestion()` uses adapter polymorphically via `PdfAdapter()` instance.
+- Adapter interface documentation.
+- Sample adapter output.
+- Parser smoke test for the first source family.

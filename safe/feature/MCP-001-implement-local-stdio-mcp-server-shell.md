@@ -5,7 +5,7 @@ Parent: [Local Stdio MCP Tools](../feature-local-stdio-mcp-tools.md)
 Capability: MCP interaction layer
 Sprint: Gamma
 Points: 5
-Status: Done
+Status: Proposed
 Dependencies: RET-002
 Wiki: [MCP Server](../../docs/wiki/mcp-server.md), [Retrieval Architecture](../../docs/wiki/retrieval-architecture.md)
 
@@ -31,8 +31,6 @@ Create the local MCP server process and dependency wiring. This story establishe
 
 ## Done Evidence
 
-- Local server startup command: `uv run sas-rag-mcp`.
-- Package entry point added as `sas-rag-mcp = sas_rag.mcp_server.server:main`.
-- Successful stdio MCP client smoke connection on 2026-06-07 listed `search_sas_docs`.
-- Startup validation fails clearly when `OPENAI_API_KEY` or `data/chroma/chroma.sqlite3` is missing.
-- Console logging writes to stderr so MCP JSON-RPC over stdout remains clean.
+- Local server startup command.
+- Successful MCP client smoke connection.
+- Failure example for missing required configuration.

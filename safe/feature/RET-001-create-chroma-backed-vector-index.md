@@ -5,7 +5,7 @@ Parent: [Hybrid Retrieval Profile](../feature-hybrid-retrieval-profile.md)
 Capability: Retrieval and grounding
 Sprint: Beta
 Points: 5
-Status: Done
+Status: Proposed
 Dependencies: ING-002, PROV-002
 Wiki: [Retrieval Architecture](../../docs/wiki/retrieval-architecture.md), [Chroma Index](../../docs/wiki/chroma-index.md)
 
@@ -35,10 +35,7 @@ Create the local vector-store foundation for PI 1 using LangChain and persistent
 
 ## Done Evidence
 
-- Index build command: `uv run python -m sas_rag.ingestion.cli index-chroma --chunks data/ingestion/runs/latest/chunks.jsonl --priority P0 --reset`.
-- Chroma report: `data/ingestion/runs/latest/chroma_report.json`.
-- Collection: `sas_94_docs` under `data/chroma`.
-- Embedding model: `text-embedding-3-small`.
-- Indexed count: 8,953 P0 chunks from 17,135 total chunks; 8,182 non-P0 chunks skipped.
-- Persisted collection count check returned 8,953 records.
-- Smoke query `PROC SQL join syntax` returned citation metadata from `docs/sas-documents/sqlproc.pdf`, including `chunk_id`, `title`, `source_uri`, `section_path`, and `page`.
+- Index build command output.
+- Chroma collection metadata sample.
+- LangChain retriever smoke query output.
+- Local query proving persisted index reuse.

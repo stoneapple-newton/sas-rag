@@ -5,7 +5,7 @@ Parent: [Parser Adapter Layer](../enabler-parser-adapter-layer.md)
 Capability: Corpus ingestion and provenance
 Sprint: Alpha
 Points: 5
-Status: Done
+Status: Proposed
 Dependencies: PARSE-001, PROV-001
 Wiki: [Ingestion Pipeline](../../docs/wiki/ingestion-pipeline.md), [Chunking Strategy](../../docs/wiki/chunking-strategy.md)
 
@@ -31,6 +31,6 @@ Normalize parser output into predictable text and heading paths before chunking.
 
 ## Done Evidence
 
-- `normalize_text()` and `normalize_unit()` implemented in `src/sas_rag/ingestion/normalizer.py`.
-- Deterministic whitespace cleanup and heading path construction.
-- `NormalizedUnit` includes `section_path = " > ".join(heading_path)` for downstream provenance.
+- Before/after normalized source sample.
+- Heading path sample.
+- Chunker-ready normalized document unit.

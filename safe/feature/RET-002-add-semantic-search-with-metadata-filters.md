@@ -5,7 +5,7 @@ Parent: [Hybrid Retrieval Profile](../feature-hybrid-retrieval-profile.md)
 Capability: Retrieval and grounding
 Sprint: Beta
 Points: 5
-Status: Done
+Status: Proposed
 Dependencies: RET-001
 Wiki: [Retrieval Architecture](../../docs/wiki/retrieval-architecture.md), [Provenance Schema](../../docs/wiki/provenance-schema.md)
 

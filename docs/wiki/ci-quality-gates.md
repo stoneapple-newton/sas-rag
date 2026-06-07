@@ -10,7 +10,3 @@ Related stories:
 Notes:
 - Keep checks locally reproducible where practical.
 - Avoid remote deployment requirements for PI 1 CI.
-- Current local gate: `uv run ruff check` and `uv run pytest -q`.
-- MCP contract tests live in `tests/test_mcp_contracts.py`.
-- Contract tests use fake embeddings and temporary Chroma collections so they do not require OpenAI.
-- Live MCP smoke remains manual for now because it uses the local OpenAI-backed index.

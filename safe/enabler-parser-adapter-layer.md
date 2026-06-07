@@ -5,7 +5,7 @@ Capability: Corpus ingestion and provenance
 Priority: P0
 Sprint target: Alpha/Beta
 Owner role: Data Engineer
-Status: Done
+Status: Proposed
 Dependencies: ING-001
 
 ## Intent
@@ -54,7 +54,3 @@ Acceptance criteria:
 - Adapter interface is documented.
 - Normalized output supports provenance and chunking stories.
 - Parse failures are reported clearly.
-
-Current status:
-- Done for the PDF-first PI 1 corpus.
-- HTML/text adapters remain future extension points behind the existing adapter interface.

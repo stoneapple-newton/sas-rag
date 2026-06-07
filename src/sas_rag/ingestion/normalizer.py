@@ -1,11 +1,8 @@
 from __future__ import annotations
 
-import logging
 import re
 
-from sas_rag.ingestion.models.records import DocumentUnit, NormalizedUnit
-
-logger = logging.getLogger(__name__)
+from sas_rag.ingestion.models import DocumentUnit, NormalizedUnit
 
 
 _HORIZONTAL_WHITESPACE = re.compile(r"[ \t]+")
@@ -20,15 +17,9 @@ def normalize_text(text: str) -> str:
 
 
 def normalize_unit(unit: DocumentUnit) -> NormalizedUnit:
-    original_len = len(unit.text)
     text = normalize_text(unit.text)
-    normalized_len = len(text)
-
     section_path = " > ".join(unit.heading_path)
     markdown = f"# {unit.source.title}\n\n## Page {unit.page}\n\n{text}\n"
-
-    logger.debug(f"Normalized unit: {unit.source.source_id} page {unit.page} (text: {original_len} -> {normalized_len} chars)")
-
     return NormalizedUnit(
         source=unit.source,
         page=unit.page,

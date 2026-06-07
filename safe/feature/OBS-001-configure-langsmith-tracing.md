@@ -5,7 +5,7 @@ Parent: [LangSmith Observability](../feature-langsmith-observability.md)
 Capability: Delivery and operations
 Sprint: Alpha
 Points: 3
-Status: Done
+Status: Proposed
 Dependencies: None
 Wiki: [Observability and Evals](../../docs/wiki/observability-and-evals.md)
 
@@ -31,6 +31,6 @@ Document and wire optional LangSmith tracing for local workflows without making 
 
 ## Done Evidence
 
-- LangSmith trace instrumentation beyond configuration belongs to Sprint Gamma story OBS-002.
-- Configuration variables documented in `example.env`: `LANGSMITH_API_KEY`, `LANGSMITH_TRACING`, `LANGSMITH_PROJECT`.
-- `docs/wiki/observability-and-evals.md` notes the deferral and current config-only approach.
+- Setup documentation.
+- Smoke trace screenshot or run link reference.
+- Local disabled-tracing run confirmation.

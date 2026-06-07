@@ -5,7 +5,7 @@ Parent: [Hybrid Retrieval Profile](../feature-hybrid-retrieval-profile.md)
 Capability: Retrieval and grounding
 Sprint: Gamma
 Points: 5
-Status: Ready
+Status: Proposed
 Dependencies: RET-002, EVAL-001
 Wiki: [Retrieval Architecture](../../docs/wiki/retrieval-architecture.md), [Evaluation Benchmark](../../docs/wiki/evaluation-benchmark.md)
 

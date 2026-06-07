@@ -5,7 +5,7 @@ Parent: [Local Stdio MCP Tools](../feature-local-stdio-mcp-tools.md)
 Capability: MCP interaction layer
 Sprint: Gamma
 Points: 8
-Status: Ready
+Status: Proposed
 Dependencies: MCP-002, CITE-002
 Wiki: [MCP Server](../../docs/wiki/mcp-server.md), [Citation Grounding](../../docs/wiki/citation-grounding.md), [Chunking Strategy](../../docs/wiki/chunking-strategy.md)
 

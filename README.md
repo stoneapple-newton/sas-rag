@@ -7,10 +7,10 @@ Early-stage Python project for a SAS retrieval-augmented generation system expos
 - Project scaffold exists with Python 3.13 and `uv`.
 - `main.py` is still a placeholder entry point.
 - SAFe PI planning artifacts exist under `safe/`.
-- Curated wiki pages exist under `docs/wiki/`.
-- PDF-first ingestion and Chroma indexing are implemented for local official SAS 9.4 PDFs.
-- Metadata-filtered retrieval and citation formatting are implemented.
-- Local stdio MCP server shell exists with the read-only `search_sas_docs` tool.
+- Individual feature and enabler stories exist under `safe/feature/` and `safe/enabler/`.
+- Curated wiki stubs exist under `docs/wiki/`.
+- Raw documentation/research input area exists under `docs/raw/`.
+- Ingestion, retrieval, vector index, and MCP server implementation are planned but not built yet.
 
 ## PI 1 Defaults
 
@@ -45,14 +45,6 @@ Run the current entry point:
 ```powershell
 uv run python main.py
 ```
-
-Run the local stdio MCP server:
-
-```powershell
-uv run sas-rag-mcp
-```
-
-Project-local Codex MCP config lives in `.codex/config.toml` and registers the `sas_rag` server for local Codex sessions started from this repository.
 
 Prefer `uv add <package>` for dependencies so `pyproject.toml` and `uv.lock` stay aligned.
 

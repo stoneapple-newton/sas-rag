@@ -5,7 +5,7 @@ Parent: [Official SAS Docs Ingestion](../feature-official-sas-docs-ingestion.md)
 Capability: Corpus ingestion and provenance
 Sprint: Beta
 Points: 5
-Status: Done
+Status: Proposed
 Dependencies: ING-002, PROV-002
 Wiki: [Ingestion Pipeline](../../docs/wiki/ingestion-pipeline.md), [Provenance Schema](../../docs/wiki/provenance-schema.md)
 

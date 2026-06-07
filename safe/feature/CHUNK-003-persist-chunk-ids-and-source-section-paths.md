@@ -5,7 +5,7 @@ Parent: [Structure-Aware Chunking](../feature-structure-aware-chunking.md)
 Capability: Retrieval and grounding
 Sprint: Beta
 Points: 3
-Status: Done
+Status: Proposed
 Dependencies: CHUNK-001, PROV-001
 Wiki: [Chunking Strategy](../../docs/wiki/chunking-strategy.md), [Provenance Schema](../../docs/wiki/provenance-schema.md)
 

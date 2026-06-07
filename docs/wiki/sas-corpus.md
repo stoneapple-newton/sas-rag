@@ -15,7 +15,6 @@ Notes:
 - `data/source_whitelist.json` is the machine-readable whitelist for ING-001.
 - Local PDF paths are the source URI for the first run; verified upstream SAS URLs can be added later without changing chunk provenance keys.
 - First ingestion run: 22 loaded sources, 16,698 parsed pages, 17,135 emitted chunks, 0 failed sources.
-- First Chroma run indexed the P0 subset: 8,953 chunks in collection `sas_94_docs`.
 
 P0 families:
 - macro: `mcrolref.pdf`

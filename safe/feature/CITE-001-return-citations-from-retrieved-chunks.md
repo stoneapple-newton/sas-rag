@@ -5,7 +5,7 @@ Parent: [Citation Assembler](../feature-citation-assembler.md)
 Capability: Retrieval and grounding
 Sprint: Beta
 Points: 5
-Status: Done
+Status: Proposed
 Dependencies: RET-001, PROV-002
 Wiki: [Citation Grounding](../../docs/wiki/citation-grounding.md), [Provenance Schema](../../docs/wiki/provenance-schema.md)
 

@@ -5,7 +5,7 @@ Capability: Retrieval and grounding
 Priority: P0
 Sprint target: Beta/Delta
 Owner role: QA/Automation Engineer
-Status: In Progress
+Status: Proposed
 Dependencies: ING-001, PROV-001
 
 ## Intent
@@ -54,7 +54,3 @@ Acceptance criteria:
 - Benchmark dataset is versioned in the repo or documented data location.
 - Eval commands are documented.
 - Metrics are used in release readiness discussion.
-
-Current status:
-- EVAL-001 is Done with `data/benchmark/sas_questions.json`.
-- EVAL-002 is Ready for Gamma to add recall@5 and citation accuracy checks.

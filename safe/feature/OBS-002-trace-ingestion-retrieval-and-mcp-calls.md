@@ -5,7 +5,7 @@ Parent: [LangSmith Observability](../feature-langsmith-observability.md)
 Capability: Delivery and operations
 Sprint: Gamma
 Points: 5
-Status: Ready
+Status: Proposed
 Dependencies: OBS-001, MCP-001, RET-002
 Wiki: [Observability and Evals](../../docs/wiki/observability-and-evals.md), [MCP Server](../../docs/wiki/mcp-server.md)
 

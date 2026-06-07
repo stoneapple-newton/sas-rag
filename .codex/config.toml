@@ -1,7 +1,0 @@
-[mcp_servers.sas_rag]
-command = "uv"
-args = ["run", "sas-rag-mcp"]
-enabled = true
-startup_timeout_sec = 120
-tool_timeout_sec = 120
-

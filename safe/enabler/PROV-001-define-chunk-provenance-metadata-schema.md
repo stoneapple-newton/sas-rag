@@ -5,7 +5,7 @@ Parent: [Provenance Schema](../feature-provenance-schema.md)
 Capability: Corpus ingestion and provenance
 Sprint: Alpha
 Points: 3
-Status: Done
+Status: Proposed
 Dependencies: ING-001
 Wiki: [Provenance Schema](../../docs/wiki/provenance-schema.md), [Citation Grounding](../../docs/wiki/citation-grounding.md)
 
@@ -31,6 +31,6 @@ Define the metadata contract for every indexed chunk. This schema is the bridge 
 
 ## Done Evidence
 
-- `REQUIRED_PROVENANCE_FIELDS` defined in `src/sas_rag/ingestion/models.py`.
-- Schema documented in `docs/wiki/provenance-schema.md`.
-- Contract tests in `tests/test_ingestion.py`: `test_chunk_validate_provenance_fails_on_missing_fields` and `test_chunk_validate_provenance_passes_when_complete`.
+- Published schema note.
+- Example metadata payload.
+- Review with ingestion and citation stories.

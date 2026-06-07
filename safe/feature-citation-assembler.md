@@ -5,7 +5,7 @@ Capability: Retrieval and grounding
 Priority: P0
 Sprint target: Beta/Gamma
 Owner role: ML/RAG Engineer
-Status: In Progress
+Status: Proposed
 Dependencies: RET-001, PROV-002
 
 ## Intent
@@ -54,7 +54,3 @@ Acceptance criteria:
 - Citation metadata resolves to indexed chunks.
 - Answers either cite evidence or refuse.
 - Citation accuracy is measured in evals once EVAL-002 is available.
-
-Current status:
-- CITE-001 is Done; search results and MCP `search_sas_docs` return citation-ready metadata.
-- CITE-002 and CITE-003 are Ready for Gamma.

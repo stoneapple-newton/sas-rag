@@ -5,7 +5,7 @@ Parent: [Structure-Aware Chunking](../feature-structure-aware-chunking.md)
 Capability: Retrieval and grounding
 Sprint: Beta
 Points: 8
-Status: Done
+Status: Proposed
 Dependencies: PARSE-002
 Wiki: [Chunking Strategy](../../docs/wiki/chunking-strategy.md), [SAS Corpus](../../docs/wiki/sas-corpus.md)
 

@@ -5,7 +5,7 @@ Parent: [Local Stdio MCP Tools](../feature-local-stdio-mcp-tools.md)
 Capability: MCP interaction layer
 Sprint: Gamma
 Points: 5
-Status: Ready
+Status: Proposed
 Dependencies: MCP-001, PROV-002
 Wiki: [MCP Server](../../docs/wiki/mcp-server.md), [Tool Contracts](../../docs/wiki/tool-contracts.md)
 
