@@ -12,6 +12,7 @@ logs/
 # Generated artifacts (do not commit ingestion outputs, vector indexes, or explanations)
 data/ingestion/runs/
 data/chroma/
+data\chroma\
 data/explanations/
 
 # SQLite/Chroma vector database files
@@ -19,5 +20,7 @@ data/explanations/
 *.db
 
 # OS files
+.obsidian/
+.obsidian\
 .DS_Store
 Thumbs.db
