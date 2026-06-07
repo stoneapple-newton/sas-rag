@@ -5,7 +5,7 @@ Capability: MCP interaction layer
 Priority: P1
 Sprint target: Gamma
 Owner role: Backend Engineer
-Status: Proposed
+Status: In Progress
 Dependencies: MCP-001
 
 ## Intent
@@ -44,3 +44,9 @@ Acceptance criteria:
 - Tool schemas are documented.
 - Contract tests protect the published schema.
 - Schema changes require intentional test updates.
+
+## Current Evidence
+
+- `search_sas_docs` uses schema version `1.0`.
+- Contract tests cover successful and validation-error responses for `search_sas_docs`.
+- Remaining Gamma tools still need schemas and tests as they are implemented.

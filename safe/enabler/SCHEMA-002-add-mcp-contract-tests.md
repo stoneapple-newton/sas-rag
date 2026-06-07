@@ -5,7 +5,7 @@ Parent: [Tool Schema Versioning](../enabler-tool-schema-versioning.md)
 Capability: MCP interaction layer
 Sprint: Gamma
 Points: 5
-Status: Proposed
+Status: In Progress
 Dependencies: SCHEMA-001, MCP-002
 Wiki: [Tool Contracts](../../docs/wiki/tool-contracts.md), [CI Quality Gates](../../docs/wiki/ci-quality-gates.md)
 
@@ -31,6 +31,6 @@ Add tests that verify tool request validation, response structure, and error beh
 
 ## Done Evidence
 
-- Contract test output.
-- CI integration note.
-- Example failing schema regression if practical.
+- Initial contract tests added in `tests/test_mcp_contracts.py`.
+- Tests cover `search_sas_docs` success response, validation error response, server tool registration, and missing-index startup validation.
+- Remaining contract tests should expand with `get_sas_section` and `explain_sas_code`.

@@ -31,6 +31,6 @@ Document and wire optional LangSmith tracing for local workflows without making 
 
 ## Done Evidence
 
-- LangSmith tracing deferred to Sprint Gamma (OBS-002) per team decision.
+- LangSmith trace instrumentation beyond configuration belongs to Sprint Gamma story OBS-002.
 - Configuration variables documented in `example.env`: `LANGSMITH_API_KEY`, `LANGSMITH_TRACING`, `LANGSMITH_PROJECT`.
 - `docs/wiki/observability-and-evals.md` notes the deferral and current config-only approach.

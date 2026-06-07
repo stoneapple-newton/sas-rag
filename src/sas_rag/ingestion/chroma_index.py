@@ -71,7 +71,7 @@ def create_openai_embeddings(model: str | None = None) -> OpenAIEmbeddings:
     embedding_model = model or settings.openai_embedding_model
     if not settings.openai_api_key:
         raise RuntimeError("OPENAI_API_KEY is required for Chroma indexing. Add it to .env or the environment.")
-    return OpenAIEmbeddings(model=embedding_model)
+    return OpenAIEmbeddings(model=embedding_model, api_key=settings.openai_api_key)
 
 
 def index_chunks_to_chroma(

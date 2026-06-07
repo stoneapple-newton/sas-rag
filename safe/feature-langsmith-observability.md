@@ -5,7 +5,7 @@ Capability: Delivery and operations
 Priority: P0
 Sprint target: Alpha/Gamma/Delta
 Owner role: ML/RAG Engineer
-Status: Proposed
+Status: In Progress
 Dependencies: None
 
 ## Intent
@@ -54,3 +54,8 @@ Acceptance criteria:
 - Tracing setup is documented.
 - Sensitive values are not logged.
 - Evaluation results can be compared to baseline.
+
+Current status:
+- OBS-001 is Done as config/documentation.
+- OBS-002 is Ready for Gamma.
+- Current MCP/retrieval logging is structured JSON and avoids stdout for stdio safety.

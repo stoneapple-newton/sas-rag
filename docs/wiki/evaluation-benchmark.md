@@ -42,6 +42,12 @@ Five intentionally unsupported questions test refusal behavior:
 
 `data/benchmark/sas_questions.json`
 
+## Current Status
+
+- EVAL-001 is Done.
+- EVAL-002 is Ready for Gamma and should add recall@5 plus citation accuracy checks.
+- Contract/unit tests currently avoid OpenAI by using fake embeddings; live smoke tests remain manual.
+
 ## Schema
 
 Each question entry includes:

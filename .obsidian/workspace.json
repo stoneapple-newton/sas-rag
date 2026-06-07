@@ -6,6 +6,7 @@
       {
         "id": "fb424b9ab6798688",
         "type": "tabs",
+        "dimension": 40.736040609137056,
         "children": [
           {
             "id": "068a17fd9fb17368",
@@ -26,6 +27,7 @@
       {
         "id": "f22248a49f00bcbf",
         "type": "tabs",
+        "dimension": 59.263959390862944,
         "children": [
           {
             "id": "98bca71011e7ba09",
@@ -33,12 +35,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "safe/feature/ING-003-ingest-prioritized-sas-94-docs-batch.md",
+                "file": "docs/wiki/sas-etl-example-analysis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ING-003-ingest-prioritized-sas-94-docs-batch"
+              "title": "sas-etl-example-analysis"
             }
           }
         ]
@@ -114,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "safe/feature/ING-003-ingest-prioritized-sas-94-docs-batch.md",
+                "file": "docs/wiki/sas-etl-example-analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +126,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for ING-003-ingest-prioritized-sas-94-docs-batch"
+              "title": "Backlinks for sas-etl-example-analysis"
             }
           },
           {
@@ -133,12 +135,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "safe/feature/ING-003-ingest-prioritized-sas-94-docs-batch.md",
+                "file": "docs/wiki/sas-etl-example-analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from ING-003-ingest-prioritized-sas-94-docs-batch"
+              "title": "Outgoing links from sas-etl-example-analysis"
             }
           },
           {
@@ -176,13 +178,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "safe/feature/ING-003-ingest-prioritized-sas-94-docs-batch.md",
+                "file": "docs/wiki/sas-etl-example-analysis.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ING-003-ingest-prioritized-sas-94-docs-batch"
+              "title": "Outline of sas-etl-example-analysis"
             }
           }
         ]
@@ -205,16 +207,19 @@
   },
   "active": "98bca71011e7ba09",
   "lastOpenFiles": [
-    "data/explanations/sas-etl-example.json",
-    "data/explanations",
-    "src/sas_rag/retrieval/__pycache__/explain.cpython-314.pyc",
-    "src/sas_rag/retrieval/explain.py",
-    "sas-test-code/sas-etl-example.sas",
-    "sas-test-code",
-    "New folder",
-    "data/ingestion/runs/beta-eval/report.json",
-    "data/ingestion/runs/beta-eval/chunks.jsonl",
-    "data/ingestion/runs/beta-eval/checksum_registry.json",
+    "docs/wiki/sas-etl-example-direct-analysis.md",
+    "docs/wiki/sas-etl-example-analysis.md",
+    "safe/feature/ING-003-ingest-prioritized-sas-94-docs-batch.md",
+    "src/sas_rag/retrieval/__pycache__/explain.cpython-313.pyc",
+    "src/sas_rag.egg-info/entry_points.txt",
+    "src/sas_rag/mcp_server/__pycache__/__init__.cpython-313.pyc",
+    "src/sas_rag/mcp_server/__pycache__/tools.cpython-313.pyc",
+    "src/sas_rag/mcp_server/__pycache__/server.cpython-313.pyc",
+    "src/sas_rag/mcp_server/__pycache__/schemas.cpython-313.pyc",
+    "src/sas_rag/mcp_server/__pycache__",
+    "tests/__pycache__/test_mcp_contracts.cpython-313-pytest-9.0.3.pyc",
+    "tests/test_mcp_contracts.py",
+    "src/sas_rag/mcp_server/server.py",
     "data/ingestion/runs/beta-eval/normalized/sqlproc.md",
     "data/ingestion/runs/beta-eval/normalized/procstat.md",
     "data/ingestion/runs/beta-eval/normalized/proc.md",
@@ -237,9 +242,6 @@
     "data/ingestion/runs/beta-eval/normalized/ds2pg.md",
     "data/ingestion/runs/beta-eval/normalized/acreldb.md",
     "data/ingestion/runs/beta-eval/normalized/acpcref.md",
-    "data/ingestion/runs/beta-eval/normalized",
-    "docs/wiki/provenance-schema.md",
-    "safe/feature/PROV-003-validate-provenance-completeness-during-ingestion.md",
-    "docs/wiki/evaluation-benchmark.md"
+    "docs/wiki/provenance-schema.md"
   ]
 }

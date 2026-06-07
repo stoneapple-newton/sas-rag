@@ -5,7 +5,7 @@ Capability: Delivery and operations
 Priority: P0
 Sprint target: Alpha/Delta
 Owner role: DevOps/SRE
-Status: Proposed
+Status: In Progress
 Dependencies: None
 
 ## Intent
@@ -44,3 +44,7 @@ Acceptance criteria:
 - CI workflows are documented.
 - Local commands match CI behavior where practical.
 - Eval checks do not require remote MCP deployment.
+
+Current status:
+- CI-001 is Done with local equivalents `uv run ruff check` and `uv run pytest -q`.
+- CI-002 remains Delta scope for integration and eval workflow expansion.

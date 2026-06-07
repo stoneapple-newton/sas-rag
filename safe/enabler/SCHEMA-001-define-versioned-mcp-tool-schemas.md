@@ -5,7 +5,7 @@ Parent: [Tool Schema Versioning](../enabler-tool-schema-versioning.md)
 Capability: MCP interaction layer
 Sprint: Gamma
 Points: 3
-Status: Proposed
+Status: In Progress
 Dependencies: MCP-001
 Wiki: [Tool Contracts](../../docs/wiki/tool-contracts.md), [MCP Server](../../docs/wiki/mcp-server.md)
 
@@ -31,6 +31,6 @@ Document the PI 1 MCP tool request and response contracts, including schema vers
 
 ## Done Evidence
 
-- Tool schema documentation.
-- Example request and response per tool.
-- Error response examples.
+- Initial `search_sas_docs` schema implemented with `schema_version: "1.0"`.
+- Standard error shape implemented for validation, configuration, insufficient-evidence, not-found, and internal errors.
+- Remaining Gamma tool schemas still need to be added as MCP-003 and MCP-004 land.

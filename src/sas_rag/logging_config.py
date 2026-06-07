@@ -31,7 +31,7 @@ def configure_logging(
     root.setLevel(logging.DEBUG)
 
     if not any(isinstance(h, logging.StreamHandler) for h in root.handlers):
-        console = logging.StreamHandler(sys.stdout)
+        console = logging.StreamHandler(sys.stderr)
         console.setLevel(console_level)
         console.setFormatter(JSONFormatter())
         root.addHandler(console)

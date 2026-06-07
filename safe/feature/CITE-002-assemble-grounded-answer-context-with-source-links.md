@@ -5,7 +5,7 @@ Parent: [Citation Assembler](../feature-citation-assembler.md)
 Capability: Retrieval and grounding
 Sprint: Gamma
 Points: 5
-Status: Proposed
+Status: Ready
 Dependencies: CITE-001, RET-002
 Wiki: [Citation Grounding](../../docs/wiki/citation-grounding.md), [Retrieval Architecture](../../docs/wiki/retrieval-architecture.md)
 

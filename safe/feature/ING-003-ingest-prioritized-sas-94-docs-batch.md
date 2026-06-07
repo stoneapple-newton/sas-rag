@@ -5,7 +5,7 @@ Parent: [Official SAS Docs Ingestion](../feature-official-sas-docs-ingestion.md)
 Capability: Corpus ingestion and provenance
 Sprint: Beta
 Points: 8
-Status: In Progress
+Status: Done
 Dependencies: ING-002, PARSE-002, PROV-002
 Wiki: [SAS Corpus](../../docs/wiki/sas-corpus.md), [Ingestion Pipeline](../../docs/wiki/ingestion-pipeline.md)
 
@@ -40,4 +40,7 @@ Scale the proven ingestion slice to the P0 SAS 9.4 source whitelist. The batch s
 - Chroma collection build report: `data/ingestion/runs/latest/chroma_report.json`.
 - First P0 index run: 8,953 chunks indexed to `sas_94_docs`; 8,182 non-P0 chunks skipped.
 - Smoke retrieval evidence exists for PROC SQL joins.
-- Sprint Beta carryover: complete smoke retrieval transcripts for macro, DATA step, and language reference topics.
+- OpenAI-backed smoke retrieval completed on 2026-06-07 for macro, DATA step, and language-reference topics.
+- Macro smoke: `SAS macro variable %LET scope resolution` with `source_family=macro` returned SAS Macro Language Reference chunks, including chunk `96015d10805a2fae727e7453`.
+- DATA step smoke: `SAS DATA step SET statement syntax` with `source_family=data-step` returned SAS Statements Reference chunks, including chunk `c729a2deb647d171ed78d679`.
+- Language-reference smoke: `SAS numeric missing values language reference` with `source_family=language-reference` returned SAS Global Statements / Functions reference chunks, including chunk `1f1ad927984b5dd2ad867b04`.

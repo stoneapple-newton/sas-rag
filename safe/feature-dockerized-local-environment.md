@@ -5,7 +5,7 @@ Capability: Delivery and operations
 Priority: P0
 Sprint target: Alpha/Delta
 Owner role: DevOps/SRE
-Status: Proposed
+Status: In Progress
 Dependencies: None
 
 ## Intent
@@ -44,3 +44,7 @@ Acceptance criteria:
 - Local setup path is documented.
 - Docker build and smoke run are documented.
 - Environment does not require committed secrets.
+
+Current status:
+- DEV-001 is Done with `uv sync` and documented local commands.
+- DEV-002 remains Delta scope for containerized MCP/eval runs.

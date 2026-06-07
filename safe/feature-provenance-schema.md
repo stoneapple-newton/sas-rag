@@ -5,7 +5,7 @@ Capability: Corpus ingestion and provenance
 Priority: P0
 Sprint target: Alpha/Beta
 Owner role: Data Engineer
-Status: Proposed
+Status: Done
 Dependencies: None
 
 ## Intent
@@ -55,3 +55,7 @@ Acceptance criteria:
 - Required metadata schema is documented.
 - Validation is part of ingestion.
 - No indexed PI 1 chunk lacks required provenance.
+
+Current status:
+- Done for PI 1 ingestion and retrieval scope.
+- Provenance is validated before indexing and emitted into citation-ready search/MCP responses.

@@ -5,7 +5,7 @@ Parent: [Benchmark Dataset](../enabler-benchmark-dataset.md)
 Capability: Retrieval and grounding
 Sprint: Gamma
 Points: 5
-Status: Proposed
+Status: Ready
 Dependencies: EVAL-001, RET-002, CITE-001
 Wiki: [Evaluation Benchmark](../../docs/wiki/evaluation-benchmark.md), [Observability and Evals](../../docs/wiki/observability-and-evals.md)
 

@@ -5,7 +5,7 @@ Parent: [Security and Secret Management](../enabler-security-secret-management.m
 Capability: Delivery and operations
 Sprint: Gamma
 Points: 3
-Status: Proposed
+Status: Ready
 Dependencies: MCP-001, SCHEMA-001
 Wiki: [Security Model](../../docs/wiki/security-model.md), [MCP Server](../../docs/wiki/mcp-server.md)
 

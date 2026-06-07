@@ -47,10 +47,9 @@
 
 ## Open Follow-Ups
 
-- Add retrieval smoke transcripts for macro, DATA step, and language reference topics before closing ING-003.
-- Implement metadata-filtered semantic search in RET-002.
 - Implement lexical fallback for exact SAS identifiers in RET-003.
-- Continue MCP server implementation after retrieval behavior stabilizes.
+- Add schemas and contract tests for `get_sas_section` and `explain_sas_code`.
+- Continue MCP server implementation with MCP-003 and MCP-004.
 
 ## 2026-06-07 (Sprint Beta Preparation)
 
@@ -129,11 +128,10 @@
 - 5 unsupported questions test refusal behavior (quantum computing, blockchain, telepathy, time reversal, lottery)
 - Updated `docs/wiki/evaluation-benchmark.md` with dataset overview and schema
 
-### ING-003: Smoke Test Limitation
-- Network environment lacks OpenAI API access; live smoke queries cannot be executed
-- Smoke test evidence for macro, DATA step, and language reference topics remains pending
-- Documented limitation in story file and log
-- All other acceptance criteria satisfied (batch ingestion, Chroma indexing, parse reporting)
+### ING-003: Smoke Evidence Carryover
+- Original Beta implementation lacked live OpenAI smoke evidence for macro, DATA step, and language-reference topics
+- Resolved during Gamma Sprint Start on 2026-06-07 with live OpenAI-backed Chroma searches
+- ING-003 is now closed
 
 ### Files Changed
 - `src/sas_rag/ingestion/chunker.py` - heading-aware and SAS-aware chunking
@@ -145,3 +143,26 @@
 - `src/sas_rag/retrieval/__init__.py` - retrieval package
 - `data/benchmark/sas_questions.json` - benchmark dataset
 - `docs/wiki/evaluation-benchmark.md` - benchmark documentation
+
+## 2026-06-07 (Gamma Sprint Start)
+
+- Refreshed Chroma collection `sas_94_docs` at `data/chroma`; 8,953 P0 chunks already present, 0 new indexed, 8,953 duplicates skipped.
+- Completed live OpenAI-backed smoke retrieval for macro, DATA step, and language-reference topics; closed ING-003.
+- Added `mcp` dependency and `sas-rag-mcp` console script for the local stdio MCP server.
+- Implemented `sas_rag.mcp_server` with startup validation, clean stderr logging, versioned schemas, and read-only `search_sas_docs`.
+- Fixed OpenAI embedding construction to pass the configured API key from Pydantic settings into `OpenAIEmbeddings`.
+- Added MCP contract tests for `search_sas_docs` success, validation error, server registration, and missing-index startup validation.
+- Verified live stdio MCP client can call `search_sas_docs`; PROC SQL smoke returned cited chunk `d45ef63bda8acda13d278b99`.
+- Marked MCP-001 and MCP-002 Done; moved remaining Gamma stories to Ready where implementation has not started.
+
+## 2026-06-07 (SAFe and Wiki Reconciliation)
+
+- Updated `safe/README.md` with the current Alpha/Beta/Gamma status, current Chroma collection, and MCP command.
+- Updated parent SAFe pages so ingestion is Done and Gamma parent items reflect In Progress/Ready state.
+- Updated `docs/wiki/chroma-index.md` with the 2026-06-07 refresh result and MCP startup dependency.
+- Updated feature/enabler story indexes with status columns.
+- Updated security, observability/evals, citation grounding, and benchmark wiki pages with current Gamma-start state.
+- Added project-local Codex MCP configuration in `.codex/config.toml` for server `sas_rag`.
+- Added `docs/wiki/sas-etl-example-analysis.md` with MCP-backed analysis of `sas-test-code/sas-etl-example.sas`.
+- Added `docs/wiki/sas-etl-example-direct-analysis.md` with direct no-RAG analysis of `sas-test-code/sas-etl-example.sas` and cross-linked it with the MCP-backed analysis page.
+- Refreshed `docs/wiki/sas-etl-example-analysis.md` with a current MCP-backed SAS construct analysis and explicit citation coverage limitations.

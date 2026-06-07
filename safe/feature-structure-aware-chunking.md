@@ -5,7 +5,7 @@ Capability: Retrieval and grounding
 Priority: P0
 Sprint target: Beta
 Owner role: ML/RAG Engineer
-Status: Proposed
+Status: Done
 Dependencies: PARSE-002, PROV-002
 
 ## Intent
@@ -68,3 +68,7 @@ Acceptance criteria:
 - Documentation and SAS-aware chunking tests pass.
 - Representative SAS examples are manually inspected.
 - Benchmark smoke retrieval does not regress after chunking changes.
+
+Current status:
+- Done for Beta.
+- Heading-aware documentation chunking, SAS-aware code boundary detection, stable chunk IDs, and section paths are implemented.

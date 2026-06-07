@@ -5,7 +5,7 @@ Capability: MCP interaction layer
 Priority: P0
 Sprint target: Gamma/Delta
 Owner role: Backend Engineer
-Status: Proposed
+Status: In Progress
 Dependencies: RET-002, CITE-001
 
 ## Intent
@@ -74,3 +74,9 @@ Acceptance criteria:
 - Local MCP server works through `stdio`.
 - All tools are read-only.
 - Tool schemas are documented and contract-tested.
+
+## Current Evidence
+
+- `sas-rag-mcp` starts the local stdio MCP server.
+- Stdio client smoke listed `search_sas_docs` on 2026-06-07.
+- Live `search_sas_docs` call returned cited PROC SQL evidence from local Chroma.

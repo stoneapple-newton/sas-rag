@@ -63,5 +63,6 @@ Acceptance criteria:
 - Recall metrics are captured against the benchmark when available.
 
 Current status:
-- Local semantic vector index exists and can be queried through the ingestion CLI.
-- Metadata filters and lexical fallback remain in RET-002 and RET-003.
+- Local semantic vector index exists and can be queried through the ingestion CLI and MCP `search_sas_docs`.
+- Metadata filters are implemented in RET-002.
+- Lexical fallback remains in RET-003 and is Ready for Gamma.

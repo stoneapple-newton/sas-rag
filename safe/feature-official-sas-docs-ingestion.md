@@ -5,7 +5,7 @@ Capability: Corpus ingestion and provenance
 Priority: P0
 Sprint target: Alpha/Beta
 Owner role: Data Engineer
-Status: In Progress
+Status: Done
 Dependencies: None
 
 ## Intent
@@ -62,6 +62,8 @@ Current evidence:
 - First Chroma indexing run filtered `priority == "P0"` and reset `sas_94_docs`.
 - 8,953 P0 chunks were indexed with `text-embedding-3-small`; 8,182 non-P0 chunks were skipped.
 - PROC SQL smoke query returned citation metadata from `docs/sas-documents/sqlproc.pdf`.
+- 2026-06-07 live smoke queries covered macro, DATA step, and language-reference topics.
+- 2026-06-07 Chroma refresh confirmed 8,953 P0 chunks already present and 0 new documents needed.
 
 ### ING-004 - Add checksum and re-ingestion controls
 
@@ -79,3 +81,7 @@ Acceptance criteria:
 - Ingestion command and source whitelist are documented.
 - Sample retrieval demonstrates indexed official SAS 9.4 content.
 - Ingestion failures are visible in a report or log.
+
+Current status:
+- Done for PI 1 ingestion scope.
+- Follow-up enrichment: replace local PDF paths with official upstream SAS source URLs where available.

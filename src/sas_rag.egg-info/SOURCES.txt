@@ -6,9 +6,11 @@ src/sas_rag/logging_config.py
 src/sas_rag.egg-info/PKG-INFO
 src/sas_rag.egg-info/SOURCES.txt
 src/sas_rag.egg-info/dependency_links.txt
+src/sas_rag.egg-info/entry_points.txt
 src/sas_rag.egg-info/requires.txt
 src/sas_rag.egg-info/top_level.txt
 src/sas_rag/ingestion/__init__.py
+src/sas_rag/ingestion/checksum.py
 src/sas_rag/ingestion/chroma_index.py
 src/sas_rag/ingestion/chunker.py
 src/sas_rag/ingestion/cli.py
@@ -19,5 +21,13 @@ src/sas_rag/ingestion/whitelist.py
 src/sas_rag/ingestion/models/__init__.py
 src/sas_rag/ingestion/models/records.py
 src/sas_rag/ingestion/models/schemas.py
+src/sas_rag/mcp_server/__init__.py
+src/sas_rag/mcp_server/schemas.py
+src/sas_rag/mcp_server/server.py
+src/sas_rag/mcp_server/tools.py
+src/sas_rag/retrieval/__init__.py
+src/sas_rag/retrieval/explain.py
+src/sas_rag/retrieval/search.py
 tests/test_chroma_index.py
 tests/test_ingestion.py
+tests/test_mcp_contracts.py
