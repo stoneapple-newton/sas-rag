@@ -1,0 +1,1633 @@
+{
+  "analysis": {
+    "file_path": "sas-test-code\\sas-etl-example.sas",
+    "macro_definitions": [
+      "drop_all_etl_views",
+      "etl_death",
+      "etl_drug_exposure",
+      "etl_observation_period",
+      "etl_person",
+      "test_etl"
+    ],
+    "proc_calls": [
+      "sql",
+      "surveyselect"
+    ],
+    "data_steps": [
+      "type"
+    ],
+    "macro_variables": [
+      "drug_year_list",
+      "part_d_coverage_regex",
+      "part_d_enrollment_code",
+      "pde_file_suffix",
+      "pde_library",
+      "user_library",
+      "y",
+      "year_list"
+    ],
+    "macro_functions": [
+      "drop_all_etl_views",
+      "etl_death",
+      "etl_drug_exposure",
+      "etl_observation_period",
+      "etl_person",
+      "eval",
+      "let",
+      "macro",
+      "mend",
+      "scan",
+      "sysfunc",
+      "test_etl"
+    ],
+    "sas_functions": [
+      "CDM_ETL_BENE_IDS",
+      "ETL",
+      "Event",
+      "Informatics",
+      "Services",
+      "countw",
+      "created",
+      "day",
+      "eval",
+      "intnx",
+      "mdy",
+      "month",
+      "prxmatch",
+      "put",
+      "putn",
+      "scan",
+      "sysfunc",
+      "test_etl",
+      "type",
+      "year"
+    ],
+    "librefs": [
+      "B",
+      "S",
+      "U",
+      "a",
+      "anyway",
+      "approx",
+      "b",
+      "c",
+      "correct",
+      "d",
+      "data",
+      "e",
+      "f",
+      "fabricio",
+      "files",
+      "github",
+      "i",
+      "month",
+      "nih",
+      "program",
+      "resdac",
+      "them",
+      "unique",
+      "view",
+      "views",
+      "www",
+      "y",
+      "year",
+      "years",
+      "zn"
+    ],
+    "summary": "SAS program with 285 lines. Defines 6 macros: drop_all_etl_views, etl_death, etl_drug_exposure, etl_observation_period, etl_person, test_etl. Uses PROC sql, surveyselect. Contains 1 DATA step definition(s). Declares 8 macro variable(s)."
+  },
+  "queries": [
+    {
+      "topic": "PROC SQL",
+      "query": "PROC SQL syntax and usage",
+      "source_family": "proc-sql"
+    },
+    {
+      "topic": "PROC SURVEYSELECT",
+      "query": "PROC SURVEYSELECT syntax and usage",
+      "source_family": "procedures"
+    },
+    {
+      "topic": "%drop_all_etl_views macro",
+      "query": "SAS macro definition %MACRO drop_all_etl_views %MEND syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%etl_death macro",
+      "query": "SAS macro definition %MACRO etl_death %MEND syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%etl_drug_exposure macro",
+      "query": "SAS macro definition %MACRO etl_drug_exposure %MEND syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%etl_observation_period macro",
+      "query": "SAS macro definition %MACRO etl_observation_period %MEND syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%etl_person macro",
+      "query": "SAS macro definition %MACRO etl_person %MEND syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%test_etl macro",
+      "query": "SAS macro definition %MACRO test_etl %MEND syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%drop_all_etl_views()",
+      "query": "SAS macro function %drop_all_etl_views syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%etl_death()",
+      "query": "SAS macro function %etl_death syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%etl_drug_exposure()",
+      "query": "SAS macro function %etl_drug_exposure syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%etl_observation_period()",
+      "query": "SAS macro function %etl_observation_period syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%etl_person()",
+      "query": "SAS macro function %etl_person syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%eval()",
+      "query": "SAS macro function %eval syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%let()",
+      "query": "SAS macro function %let syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%macro()",
+      "query": "SAS macro function %macro syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%mend()",
+      "query": "SAS macro function %mend syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%scan()",
+      "query": "SAS macro function %scan syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%sysfunc()",
+      "query": "SAS macro function %sysfunc syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "%test_etl()",
+      "query": "SAS macro function %test_etl syntax",
+      "source_family": "macro"
+    },
+    {
+      "topic": "CDM_ETL_BENE_IDS()",
+      "query": "SAS function CDM_ETL_BENE_IDS syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "ETL()",
+      "query": "SAS function ETL syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "Event()",
+      "query": "SAS function Event syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "Informatics()",
+      "query": "SAS function Informatics syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "Services()",
+      "query": "SAS function Services syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "countw()",
+      "query": "SAS function countw syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "created()",
+      "query": "SAS function created syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "day()",
+      "query": "SAS function day syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "eval()",
+      "query": "SAS function eval syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "intnx()",
+      "query": "SAS function intnx syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "mdy()",
+      "query": "SAS function mdy syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "month()",
+      "query": "SAS function month syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "prxmatch()",
+      "query": "SAS function prxmatch syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "put()",
+      "query": "SAS function put syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "putn()",
+      "query": "SAS function putn syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "scan()",
+      "query": "SAS function scan syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "sysfunc()",
+      "query": "SAS function sysfunc syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "test_etl()",
+      "query": "SAS function test_etl syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "type()",
+      "query": "SAS function type syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "year()",
+      "query": "SAS function year syntax and examples",
+      "source_family": "language-reference"
+    },
+    {
+      "topic": "&drug_year_list macro variable",
+      "query": "SAS macro variable %LET scope resolution",
+      "source_family": "macro"
+    },
+    {
+      "topic": "&part_d_coverage_regex macro variable",
+      "query": "SAS macro variable %LET scope resolution",
+      "source_family": "macro"
+    },
+    {
+      "topic": "&part_d_enrollment_code macro variable",
+      "query": "SAS macro variable %LET scope resolution",
+      "source_family": "macro"
+    },
+    {
+      "topic": "&pde_file_suffix macro variable",
+      "query": "SAS macro variable %LET scope resolution",
+      "source_family": "macro"
+    },
+    {
+      "topic": "&pde_library macro variable",
+      "query": "SAS macro variable %LET scope resolution",
+      "source_family": "macro"
+    }
+  ],
+  "explanations": [
+    {
+      "topic": "PROC SQL",
+      "query": "PROC SQL syntax and usage",
+      "source_family": "proc-sql",
+      "evidence": [
+        {
+          "chunk_id": "a0c34215db31adb9e895083d",
+          "title": "SAS SQL Procedure User's Guide",
+          "source_uri": "docs/sas-documents/sqlproc.pdf",
+          "version": "9.4",
+          "section_path": "SAS SQL Procedure User's Guide > Page 263",
+          "page": 263,
+          "source_family": "proc-sql",
+          "chunk_type": null,
+          "score": 0.8188214302062988
+        },
+        {
+          "chunk_id": "d8a28b3ddafd49caa2fc2e05",
+          "title": "SAS SQL Procedure User's Guide",
+          "source_uri": "docs/sas-documents/sqlproc.pdf",
+          "version": "9.4",
+          "section_path": "SAS SQL Procedure User's Guide > Page 212",
+          "page": 212,
+          "source_family": "proc-sql",
+          "chunk_type": null,
+          "score": 0.8707291483879089
+        }
+      ]
+    },
+    {
+      "topic": "PROC SURVEYSELECT",
+      "query": "PROC SURVEYSELECT syntax and usage",
+      "source_family": "procedures",
+      "evidence": [
+        {
+          "chunk_id": "469b3ae6d73843104765386a",
+          "title": "Base SAS Procedures Guide",
+          "source_uri": "docs/sas-documents/proc.pdf",
+          "version": "9.4",
+          "section_path": "Base SAS Procedures Guide > Page 2634",
+          "page": 2634,
+          "source_family": "procedures",
+          "chunk_type": null,
+          "score": 0.8731958866119385
+        },
+        {
+          "chunk_id": "7b1741a8469a40427d005147",
+          "title": "Base SAS Procedures Guide",
+          "source_uri": "docs/sas-documents/proc.pdf",
+          "version": "9.4",
+          "section_path": "Base SAS Procedures Guide > Page 2799",
+          "page": 2799,
+          "source_family": "procedures",
+          "chunk_type": null,
+          "score": 0.8962589502334595
+        }
+      ]
+    },
+    {
+      "topic": "%drop_all_etl_views macro",
+      "query": "SAS macro definition %MACRO drop_all_etl_views %MEND syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "b06402804a87ea2a41408b73",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 601",
+          "page": 601,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.7773257493972778
+        },
+        {
+          "chunk_id": "2259930286aac0cda5d5e5c0",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 339",
+          "page": 339,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.778809666633606
+        }
+      ]
+    },
+    {
+      "topic": "%etl_death macro",
+      "query": "SAS macro definition %MACRO etl_death %MEND syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "dbe0a64979ab134bca42911c",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 253",
+          "page": 253,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6779466867446899
+        },
+        {
+          "chunk_id": "0f8a402e56ad1dfda9197e4f",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 432",
+          "page": 432,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6789937019348145
+        }
+      ]
+    },
+    {
+      "topic": "%etl_drug_exposure macro",
+      "query": "SAS macro definition %MACRO etl_drug_exposure %MEND syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "dbe0a64979ab134bca42911c",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 253",
+          "page": 253,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.7170233726501465
+        },
+        {
+          "chunk_id": "2259930286aac0cda5d5e5c0",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 339",
+          "page": 339,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.7173470258712769
+        }
+      ]
+    },
+    {
+      "topic": "%etl_observation_period macro",
+      "query": "SAS macro definition %MACRO etl_observation_period %MEND syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "b92eddeb47df0b86a00da7e9",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 254",
+          "page": 254,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.7053214311599731
+        },
+        {
+          "chunk_id": "dbe0a64979ab134bca42911c",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 253",
+          "page": 253,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.7082090377807617
+        }
+      ]
+    },
+    {
+      "topic": "%etl_person macro",
+      "query": "SAS macro definition %MACRO etl_person %MEND syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "dbe0a64979ab134bca42911c",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 253",
+          "page": 253,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6133581399917603
+        },
+        {
+          "chunk_id": "2259930286aac0cda5d5e5c0",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 339",
+          "page": 339,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6208471655845642
+        }
+      ]
+    },
+    {
+      "topic": "%test_etl macro",
+      "query": "SAS macro definition %MACRO test_etl %MEND syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "dbe0a64979ab134bca42911c",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 253",
+          "page": 253,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6557891964912415
+        },
+        {
+          "chunk_id": "b92eddeb47df0b86a00da7e9",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 254",
+          "page": 254,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.660009503364563
+        }
+      ]
+    },
+    {
+      "topic": "%drop_all_etl_views()",
+      "query": "SAS macro function %drop_all_etl_views syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "b06402804a87ea2a41408b73",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 601",
+          "page": 601,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.8874492645263672
+        },
+        {
+          "chunk_id": "34aec545c90b269bc0cc1f62",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 393",
+          "page": 393,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.95009845495224
+        }
+      ]
+    },
+    {
+      "topic": "%etl_death()",
+      "query": "SAS macro function %etl_death syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "b92eddeb47df0b86a00da7e9",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 254",
+          "page": 254,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.8983782529830933
+        },
+        {
+          "chunk_id": "dbe0a64979ab134bca42911c",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 253",
+          "page": 253,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.9057008624076843
+        }
+      ]
+    },
+    {
+      "topic": "%etl_drug_exposure()",
+      "query": "SAS macro function %etl_drug_exposure syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "34aec545c90b269bc0cc1f62",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 393",
+          "page": 393,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.9521766304969788
+        },
+        {
+          "chunk_id": "f8a0fc0f6f309d415c2da711",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 268",
+          "page": 268,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.9553430080413818
+        }
+      ]
+    },
+    {
+      "topic": "%etl_observation_period()",
+      "query": "SAS macro function %etl_observation_period syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "0857f4c79802ea6d93164d8a",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 317",
+          "page": 317,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.8233287930488586
+        },
+        {
+          "chunk_id": "a8fdc60bc3486c1ef1644176",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 584",
+          "page": 584,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.8745720386505127
+        }
+      ]
+    },
+    {
+      "topic": "%etl_person()",
+      "query": "SAS macro function %etl_person syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "b92eddeb47df0b86a00da7e9",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 254",
+          "page": 254,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.8215317726135254
+        },
+        {
+          "chunk_id": "dbe0a64979ab134bca42911c",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 253",
+          "page": 253,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.8233909606933594
+        }
+      ]
+    },
+    {
+      "topic": "%eval()",
+      "query": "SAS macro function %eval syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "38dcabd2ddad747c1daa6906",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 369",
+          "page": 369,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.5535278916358948
+        },
+        {
+          "chunk_id": "248d1213b150d217f92b2695",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 106",
+          "page": 106,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.5692511796951294
+        }
+      ]
+    },
+    {
+      "topic": "%let()",
+      "query": "SAS macro function %let syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "e71d0a021ddaf7ef578a5df4",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 419",
+          "page": 419,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6422438621520996
+        },
+        {
+          "chunk_id": "dbe0a64979ab134bca42911c",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 253",
+          "page": 253,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6475144624710083
+        }
+      ]
+    },
+    {
+      "topic": "%macro()",
+      "query": "SAS macro function %macro syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "b92eddeb47df0b86a00da7e9",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 254",
+          "page": 254,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.4772682189941406
+        },
+        {
+          "chunk_id": "dbe0a64979ab134bca42911c",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 253",
+          "page": 253,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.4780600666999817
+        }
+      ]
+    },
+    {
+      "topic": "%mend()",
+      "query": "SAS macro function %mend syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "dbe0a64979ab134bca42911c",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 253",
+          "page": 253,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6965816020965576
+        },
+        {
+          "chunk_id": "0d69bf8b71a5ca579b074bad",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 171",
+          "page": 171,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.7029005289077759
+        }
+      ]
+    },
+    {
+      "topic": "%scan()",
+      "query": "SAS macro function %scan syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "2c5e5b61d3d67e3fb2c7105b",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 353",
+          "page": 353,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.49623367190361023
+        },
+        {
+          "chunk_id": "9c569eb4edf974e939bd3736",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 356",
+          "page": 356,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6104971766471863
+        }
+      ]
+    },
+    {
+      "topic": "%sysfunc()",
+      "query": "SAS macro function %sysfunc syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "0f5c0ab937dbbf347a95b43e",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 144",
+          "page": 144,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.5410879850387573
+        },
+        {
+          "chunk_id": "25607b162756dfddf62db857",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 145",
+          "page": 145,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.5802794098854065
+        }
+      ]
+    },
+    {
+      "topic": "%test_etl()",
+      "query": "SAS macro function %test_etl syntax",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "ea78aa7d39e464b2cb103ffb",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 480",
+          "page": 480,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.8406944274902344
+        },
+        {
+          "chunk_id": "a8fdc60bc3486c1ef1644176",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 584",
+          "page": 584,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.8458009958267212
+        }
+      ]
+    },
+    {
+      "topic": "CDM_ETL_BENE_IDS()",
+      "query": "SAS function CDM_ETL_BENE_IDS syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "79b0fe0ed07c2a687ede27da",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 141",
+          "page": 141,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.9649085998535156
+        },
+        {
+          "chunk_id": "0c3fbd6bc32e83c02f4ab0bc",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 278",
+          "page": 278,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.9679742455482483
+        }
+      ]
+    },
+    {
+      "topic": "ETL()",
+      "query": "SAS function ETL syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "9e3fc9cab729afe7017d15d3",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 171",
+          "page": 171,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.8572928309440613
+        },
+        {
+          "chunk_id": "63198e016e0d02eba22e33c0",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 187",
+          "page": 187,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.8580789566040039
+        }
+      ]
+    },
+    {
+      "topic": "Event()",
+      "query": "SAS function Event syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "86be11d68fbe7859e02ea190",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 1035",
+          "page": 1035,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.8121962547302246
+        },
+        {
+          "chunk_id": "953604c4d1bd1021ad993c51",
+          "title": "SAS System Options Reference",
+          "source_uri": "docs/sas-documents/lesysoptsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS System Options Reference > Page 203",
+          "page": 203,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.8432176113128662
+        }
+      ]
+    },
+    {
+      "topic": "Informatics()",
+      "query": "SAS function Informatics syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "f9ec63d87a2e76e1b55b166b",
+          "title": "SAS Formats and Informats Reference",
+          "source_uri": "docs/sas-documents/leforinforref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Formats and Informats Reference > Page 555",
+          "page": 555,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.7026553153991699
+        },
+        {
+          "chunk_id": "d9e9c6e2dc59adbd22be31a0",
+          "title": "SAS Formats and Informats Reference",
+          "source_uri": "docs/sas-documents/leforinforref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Formats and Informats Reference > Page 577",
+          "page": 577,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.7115421295166016
+        }
+      ]
+    },
+    {
+      "topic": "Services()",
+      "query": "SAS function Services syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "85c6c7131afd63e82ec6465f",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 23",
+          "page": 23,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.7290926575660706
+        },
+        {
+          "chunk_id": "890564c41a9a717dbae2f1a2",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 24",
+          "page": 24,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.7315986156463623
+        }
+      ]
+    },
+    {
+      "topic": "countw()",
+      "query": "SAS function countw syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "cd92e707a58bb08953fb5698",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 593",
+          "page": 593,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.6244074106216431
+        },
+        {
+          "chunk_id": "0084bf97e6a47f0b1e3c4ead",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 595",
+          "page": 595,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.6724215149879456
+        }
+      ]
+    },
+    {
+      "topic": "created()",
+      "query": "SAS function created syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "badb8918422cea797cd42ed9",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 113",
+          "page": 113,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.7189339995384216
+        },
+        {
+          "chunk_id": "c9358b498b270c352483168a",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 112",
+          "page": 112,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.7204535603523254
+        }
+      ]
+    },
+    {
+      "topic": "day()",
+      "query": "SAS function day syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "9303c276a072be0cdb1554d3",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 621",
+          "page": 621,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.6249843239784241
+        },
+        {
+          "chunk_id": "d120069ddd774d740e7f2215",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 615",
+          "page": 615,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.6727951765060425
+        }
+      ]
+    },
+    {
+      "topic": "eval()",
+      "query": "SAS function eval syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "4b0a9934a443e62e669c275c",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 1415",
+          "page": 1415,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.8228310346603394
+        },
+        {
+          "chunk_id": "426304a6403d71b7287c5ab2",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 1561",
+          "page": 1561,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.8778133392333984
+        }
+      ]
+    },
+    {
+      "topic": "intnx()",
+      "query": "SAS function intnx syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "36d683dbd3da44fb50da09f2",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 1112",
+          "page": 1112,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.6852099895477295
+        },
+        {
+          "chunk_id": "6b767eb6f3c6aa503cb66a1e",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 1090",
+          "page": 1090,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.6926655769348145
+        }
+      ]
+    },
+    {
+      "topic": "mdy()",
+      "query": "SAS function mdy syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "746016feafa9057fee699316",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 1210",
+          "page": 1210,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.7311422824859619
+        },
+        {
+          "chunk_id": "575fbcd3fc8ce0c331a0df99",
+          "title": "SAS Formats and Informats Reference",
+          "source_uri": "docs/sas-documents/leforinforref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Formats and Informats Reference > Page 256",
+          "page": 256,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.8068941235542297
+        }
+      ]
+    },
+    {
+      "topic": "month()",
+      "query": "SAS function month syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "50651df365862c18fcd331e1",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 1229",
+          "page": 1229,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.6434859037399292
+        },
+        {
+          "chunk_id": "e0f51ed876e0ec3b9ec6e510",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 61",
+          "page": 61,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.6845113635063171
+        }
+      ]
+    },
+    {
+      "topic": "prxmatch()",
+      "query": "SAS function prxmatch syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "4884b26803bc68c581a3d336",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 1381",
+          "page": 1381,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.5766037106513977
+        },
+        {
+          "chunk_id": "1bbd4b48e0c786d8699bb66f",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 69",
+          "page": 69,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.5968911051750183
+        }
+      ]
+    },
+    {
+      "topic": "put()",
+      "query": "SAS function put syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "348d5946d84895d4d2688db9",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 1397",
+          "page": 1397,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.6781010627746582
+        },
+        {
+          "chunk_id": "b50af03479435bcfb8a56f3b",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 1404",
+          "page": 1404,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.6851407289505005
+        }
+      ]
+    },
+    {
+      "topic": "putn()",
+      "query": "SAS function putn syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "b50af03479435bcfb8a56f3b",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 1404",
+          "page": 1404,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.6341631412506104
+        },
+        {
+          "chunk_id": "7e008d623c47bfbb4f3857d6",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 1403",
+          "page": 1403,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.6610273122787476
+        }
+      ]
+    },
+    {
+      "topic": "scan()",
+      "query": "SAS function scan syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "96d00e562f04cf013bb3a940",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 421",
+          "page": 421,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.6535217761993408
+        },
+        {
+          "chunk_id": "cc4ae46b7bdd1f8d9f580d0f",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 425",
+          "page": 425,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.6539748907089233
+        }
+      ]
+    },
+    {
+      "topic": "sysfunc()",
+      "query": "SAS function sysfunc syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "4b4c5abed380eb4a2b86d3a9",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 226",
+          "page": 226,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.7333129644393921
+        },
+        {
+          "chunk_id": "d9256c16bff88c5e0081d5dc",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 130",
+          "page": 130,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.7458504438400269
+        }
+      ]
+    },
+    {
+      "topic": "test_etl()",
+      "query": "SAS function test_etl syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "63198e016e0d02eba22e33c0",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 187",
+          "page": 187,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.8804539442062378
+        },
+        {
+          "chunk_id": "9e3fc9cab729afe7017d15d3",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 171",
+          "page": 171,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.9074168801307678
+        }
+      ]
+    },
+    {
+      "topic": "type()",
+      "query": "SAS function type syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "85c6c7131afd63e82ec6465f",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 23",
+          "page": 23,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.7157585620880127
+        },
+        {
+          "chunk_id": "b322b40043d78e6b6aa792cb",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 107",
+          "page": 107,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.719306468963623
+        }
+      ]
+    },
+    {
+      "topic": "year()",
+      "query": "SAS function year syntax and examples",
+      "source_family": "language-reference",
+      "evidence": [
+        {
+          "chunk_id": "21d81758d94606250dc29336",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 1707",
+          "page": 1707,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.5894202589988708
+        },
+        {
+          "chunk_id": "890f5649f54387b263189c0c",
+          "title": "SAS Functions and CALL Routines Reference",
+          "source_uri": "docs/sas-documents/lefunctionsref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Functions and CALL Routines Reference > Page 1211",
+          "page": 1211,
+          "source_family": "language-reference",
+          "chunk_type": null,
+          "score": 0.6077417135238647
+        }
+      ]
+    },
+    {
+      "topic": "&drug_year_list macro variable",
+      "query": "SAS macro variable %LET scope resolution",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "96015d10805a2fae727e7453",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 82",
+          "page": 82,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6268048286437988
+        },
+        {
+          "chunk_id": "823a41d15d5c0b8959a8a6b3",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 73",
+          "page": 73,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6898099184036255
+        }
+      ]
+    },
+    {
+      "topic": "&part_d_coverage_regex macro variable",
+      "query": "SAS macro variable %LET scope resolution",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "96015d10805a2fae727e7453",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 82",
+          "page": 82,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6268048286437988
+        },
+        {
+          "chunk_id": "823a41d15d5c0b8959a8a6b3",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 73",
+          "page": 73,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6898099184036255
+        }
+      ]
+    },
+    {
+      "topic": "&part_d_enrollment_code macro variable",
+      "query": "SAS macro variable %LET scope resolution",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "96015d10805a2fae727e7453",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 82",
+          "page": 82,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6268048286437988
+        },
+        {
+          "chunk_id": "823a41d15d5c0b8959a8a6b3",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 73",
+          "page": 73,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6898099184036255
+        }
+      ]
+    },
+    {
+      "topic": "&pde_file_suffix macro variable",
+      "query": "SAS macro variable %LET scope resolution",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "96015d10805a2fae727e7453",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 82",
+          "page": 82,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6268048286437988
+        },
+        {
+          "chunk_id": "823a41d15d5c0b8959a8a6b3",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 73",
+          "page": 73,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6898099184036255
+        }
+      ]
+    },
+    {
+      "topic": "&pde_library macro variable",
+      "query": "SAS macro variable %LET scope resolution",
+      "source_family": "macro",
+      "evidence": [
+        {
+          "chunk_id": "96015d10805a2fae727e7453",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 82",
+          "page": 82,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6268048286437988
+        },
+        {
+          "chunk_id": "823a41d15d5c0b8959a8a6b3",
+          "title": "SAS Macro Language Reference",
+          "source_uri": "docs/sas-documents/mcrolref.pdf",
+          "version": "9.4",
+          "section_path": "SAS Macro Language Reference > Page 73",
+          "page": 73,
+          "source_family": "macro",
+          "chunk_type": null,
+          "score": 0.6898099184036255
+        }
+      ]
+    }
+  ]
+}
